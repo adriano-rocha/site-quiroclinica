@@ -1,0 +1,41 @@
+{
+  "header": {
+    "logoAlt": "Quiroclínica - Quiropráctica, Acupuntura y Terapias Avanzadas",
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "results": "Resultados",
+      "location": "Ubicación",
+      "contact": "Contacto"
+    },
+    "scheduleButton": "Agendar Cita",
+    "language": "Idioma",
+    "toggleMenu": "Abrir menú",
+    "whatsappMessage": "¡Hola! Me gustaría agendar una cita en la Quiroclínica."
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Quiroclínica",
+        "subtitle": "Atención personalizada con resultados rápidos y efectivos para el dolor crónico, rehabilitación muscular y bienestar.",
+        "buttonText": "AGENDAR CITA"
+      },
+      {
+        "title": "Transforma tu Salud",
+        "subtitle": "Tratamientos especializados en quiropráctica y acupuntura. Cuida tu cuerpo con expertos.",
+        "buttonText": "QUIERO ATENCIÓN"
+      },
+      {
+        "title": "¿Dolor de Espalda?",
+        "subtitle": "Nuestros tratamientos se enfocan en resultados duraderos. Agenda tu cita y siente la diferencia.",
+        "buttonText": "AGENDAR CITA"
+      },
+      {
+        "title": "Conoce Nuestra Clínica",
+        "subtitle": "Estructura completa y profesionales calificados para cuidar tu salud con excelencia.",
+        "buttonText": "SABER MÁS"
+      }
+    ],
+    "whatsappMessage": "¡Hola! Me gustaría agendar una cita en la Quiroclínica."
+  }
+}

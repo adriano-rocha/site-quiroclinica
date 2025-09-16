@@ -1,0 +1,88 @@
+/* IMPORTAÇÃO DA FONTE POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.footer {
+  width: 100%;
+  background: #679715;
+  color: #fff;
+  padding: 40px 24px 20px;
+  position: relative;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap; 
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-logo img {
+  max-height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.05);
+}
+
+.footer-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-notice {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff8e1; /* leve amarelo para chamar atenção */
+  border-left: 4px solid #7cb518; /* borda verde sutil */
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-logo img {
+    max-height: 70px;
+  }
+
+  .footer-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 16px 16px;
+  }
+}

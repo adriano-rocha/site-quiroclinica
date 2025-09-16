@@ -1,0 +1,41 @@
+{
+  "header": {
+    "logoAlt": "Quiroclínica - Quiropraxia, Acupuntura e Terapias Avançadas",
+    "nav": {
+      "home": "Home",
+      "about": "Sobre",
+      "results": "Resultados",
+      "location": "Localização",
+      "contact": "Contato"
+    },
+    "scheduleButton": "Agendar Consulta",
+    "language": "Idioma",
+    "toggleMenu": "Abrir menu",
+    "whatsappMessage": "Olá! Gostaria de agendar uma consulta na Quiroclínica."
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Quiroclínica",
+        "subtitle": "Atendimento personalizado com resultados rápidos e efetivos para dor crônica, reabilitação muscular e bem-estar.",
+        "buttonText": "AGENDAR CONSULTA"
+      },
+      {
+        "title": "Transforme sua Saúde",
+        "subtitle": "Tratamentos especializados em quiropraxia e acupuntura. Cuide do seu corpo com quem entende.",
+        "buttonText": "QUERO ATENDIMENTO"
+      },
+      {
+        "title": "Dor nas Costas?",
+        "subtitle": "Nossos tratamentos são focados em resultados duradouros. Agende sua consulta e sinta a diferença.",
+        "buttonText": "AGENDAR CONSULTA"
+      },
+      {
+        "title": "Conheça Nossa Clínica",
+        "subtitle": "Estrutura completa e profissionais qualificados para cuidar da sua saúde com excelência.",
+        "buttonText": "SAIBA MAIS"
+      }
+    ],
+    "whatsappMessage": "Olá! Gostaria de agendar uma consulta na Quiroclínica."
+  }
+}

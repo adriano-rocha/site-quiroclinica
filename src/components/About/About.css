@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+.about {
+  width: 100%;
+  padding: 100px 24px;
+  background: #f2f2f2;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+}
+
+.about-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.perfil-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-image:hover {
+  transform: scale(1.03);
+}
+
+
+.about-text {
+  flex: 1.5;
+}
+
+.about-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0c0c0c; 
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.about-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: blue; 
+  margin-top: 20px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.highlight {
+  color: #7cb518; 
+  font-weight: 600;
+}
+
+.highlight-blue {
+  color: blue;
+  font-weight: 600;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-description strong {
+  color: blue;
+  font-weight: 600;
+}
+
+.about-education,
+.about-benefits {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.about-education li,
+.about-benefits li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Bullet points personalizados */
+.about-education li::before,
+.about-benefits li::before {
+  content: '•';
+  color: #7cb518;
+  font-weight: 700;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+}
+
+.about-education li strong,
+.about-benefits li strong {
+  color: blue;
+  font-weight: 600;
+}
+
+/* Destaque especial para palavras-chave */
+.keyword {
+  color: #7cb518; 
+  font-weight: 600;
+}
+
+.keyword-blue {
+  color: blue;
+  font-weight: 600;
+}
+
+
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-bottom: 24px;
+  }
+
+  .about-text {
+    width: 90%;
+  }
+
+  .about-title {
+    font-size: 2.1rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-description,
+  .about-education li,
+  .about-benefits li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}

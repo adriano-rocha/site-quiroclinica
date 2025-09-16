@@ -1,0 +1,41 @@
+{
+  "header": {
+    "logoAlt": "Chiropractic Clinic - Chiropractic, Acupuncture and Advanced Therapies",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "results": "Results",
+      "location": "Location",
+      "contact": "Contact"
+    },
+    "scheduleButton": "Book Appointment",
+    "language": "Language",
+    "toggleMenu": "Open menu",
+    "whatsappMessage": "Hello! I'd like to schedule an appointment at the Chiropractic Clinic."
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Chiropractic Clinic",
+        "subtitle": "Personalized care with fast and effective results for chronic pain, muscle rehabilitation and wellbeing.",
+        "buttonText": "BOOK APPOINTMENT"
+      },
+      {
+        "title": "Transform Your Health",
+        "subtitle": "Specialized treatments in chiropractic and acupuncture. Take care of your body with experts.",
+        "buttonText": "REQUEST CARE"
+      },
+      {
+        "title": "Back Pain?",
+        "subtitle": "Our treatments focus on long-lasting results. Book your appointment and feel the difference.",
+        "buttonText": "BOOK APPOINTMENT"
+      },
+      {
+        "title": "Get to Know Our Clinic",
+        "subtitle": "Complete structure and qualified professionals to take care of your health with excellence.",
+        "buttonText": "LEARN MORE"
+      }
+    ],
+    "whatsappMessage": "Hello! I'd like to schedule an appointment at the Chiropractic Clinic."
+  }
+}
