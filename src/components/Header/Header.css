@@ -221,12 +221,6 @@
   transform: translateY(-2px) scale(1.1);
 }
 
-.mobile-flags .language-btn.active {
-  outline: 3px solid #2ecc71;
-  outline-offset: 3px;
-  border-radius: 50%;
-}
-
 .menu-toggle {
   display: none;
   flex-direction: column;
