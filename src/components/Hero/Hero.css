@@ -208,6 +208,7 @@
   .hero-arrow {
     width: 32px;
     height: 32px;
+    top: 70%;
   }
   
   .hero-arrow-left {
@@ -233,6 +234,7 @@
   .hero-arrow {
     width: 28px;
     height: 28px;
+    top: 70%;
   }
   
   .hero-arrow-left {
