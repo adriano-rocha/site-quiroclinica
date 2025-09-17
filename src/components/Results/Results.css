@@ -1,199 +1,201 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 .results {
-  padding: 80px 24px;
-  background: #fdfdfd;
-  text-align: center;
+  padding: 80px 0;
+  background-color: #f8f9fa;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .results-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
 .results-title {
-  font-size: 2.4rem;
-  color: blue;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: -0.02em;
-  line-height: 1.1;
 }
 
 .results-intro {
-  font-size: 1.05rem;
-  color: #333;
-  margin-bottom: 48px;
+  font-size: 1.2rem;
   line-height: 1.6;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #6c757d;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
-/* Destacar palavras-chave na introdução */
-.results-intro .highlight {
-  color: #7cb518; 
+.highlight {
+  color:#7CB518;
   font-weight: 600;
 }
 
-.results-intro .highlight-blue {
-  color: blue;
-  font-weight: 600;
+.highlight-blue {
+  color: #0056b3;
+  font-weight: 700;
 }
 
 .results-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .results-card {
-  background: #fff;
-  flex: 1 1 260px;
-  max-width: 280px;
-  border-radius: 8px;
-  padding: 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .results-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Alternando cores dos ícones */
 .results-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-}
-
-.results-card:nth-child(odd) .results-icon {
-  color: #7cb518; 
-}
-
-.results-card:nth-child(even) .results-icon {
-  color: blue;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .results-card-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: -0.01em;
-}
-
-/* Alternando cores dos títulos */
-.results-card:nth-child(odd) .results-card-title {
-  color: #7cb518; 
-}
-
-.results-card:nth-child(even) .results-card-title {
-  color: blue;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .results-card-description {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.6;
-}
-
-.results-card-description strong {
-  color: blue;
-  font-weight: 600;
-}
-
-.results-card-description .keyword {
-  color: #7cb518; 
-  font-weight: 600;
-}
-
-/* Botão CTA idêntico ao Hero */
-.results-cta-btn {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6c757d;
   font-family: 'Poppins', sans-serif;
-  display: inline-block;
-  padding: 16px 32px;
-  background: transparent;
-  color: blue;
-  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.results-card-description strong,
+.results-card-description .keyword {
+  color: #007bff;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border: 2px solid blue;
-  border-radius: 4px;
+}
+
+/* Estilo para o botão WhatsApp */
+.results-cta-btn.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 200px;
   text-decoration: none;
-  margin-top: 24px;
+  margin: 30px auto 0;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
 }
 
-.results-cta-btn:hover {
-  background: #7cb518;
-  color: #ffffff;
-  border-color: #7cb518;
+.results-cta-btn.whatsapp-btn:hover {
+  background-color: #128C7E;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(124, 181, 24, 0.3);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
 }
 
-.results-cta-btn:active {
-  transform: translateY(0);
+.whatsapp-icon {
+  font-size: 1.1em;
+  animation: pulse 2s infinite;
 }
 
-/* RESPONSIVO */
-@media (max-width: 992px) {
+/* Animação pulsante no ícone */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .results {
+    padding: 60px 0;
+  }
+  
+  .results-container {
+    padding: 0 15px;
+  }
+  
   .results-title {
-    font-size: 2.1rem;
-    line-height: 1.2;
+    font-size: 2rem;
   }
-
+  
+  .results-intro {
+    font-size: 1.1rem;
+  }
+  
   .results-cards {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-
+  
   .results-card {
-    max-width: 90%;
+    padding: 25px 20px;
   }
-
-  .results-cta-btn {
+  
+  .results-cta-btn.whatsapp-btn {
     padding: 14px 28px;
-    font-size: 0.9rem;
-    min-width: 180px;
+    font-size: 1.1rem;
+    width: auto;
+    max-width: 250px;
   }
 }
 
 @media (max-width: 480px) {
   .results-title {
     font-size: 1.8rem;
-    line-height: 1.2;
   }
-
+  
   .results-intro {
     font-size: 1rem;
-    line-height: 1.5;
   }
-
-  .results-card-title {
-    font-size: 1rem;
+  
+  .results-card {
+    padding: 20px 15px;
   }
-
-  .results-card-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
+  
   .results-icon {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
-
-  .results-cta-btn {
+  
+  .results-card-title {
+    font-size: 1.2rem;
+  }
+  
+  .results-cta-btn.whatsapp-btn {
     padding: 12px 24px;
-    font-size: 0.85rem;
-    min-width: 150px;
+    font-size: 1rem;
   }
 }

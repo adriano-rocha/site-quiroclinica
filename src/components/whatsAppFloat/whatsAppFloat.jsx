@@ -16,11 +16,18 @@ const WhatsAppFloat = () => {
   }, [t]);
 
   return (
-    <button className="whatsapp-float" onClick={openWhatsApp} type="button">
+    <button 
+      className="whatsapp-float intense-pulse" 
+      onClick={openWhatsApp} 
+      type="button"
+      title={t('hero.whatsappTitle', 'Fale conosco no WhatsApp')}
+      aria-label={t('hero.whatsappLabel', 'Abrir conversa no WhatsApp')}
+    >
       <img
         src="/images/whats.png"
         alt="WhatsApp"
         className="whatsapp-icon"
+        loading="lazy"
       />
     </button>
   );

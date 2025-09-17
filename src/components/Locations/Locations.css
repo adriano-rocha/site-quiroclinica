@@ -1,4 +1,3 @@
-/* IMPORTAÇÃO DA FONTE POPPINS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 .locations {
@@ -17,7 +16,7 @@
 }
 
 .locations-info h2 {
-  font-size: 2.25rem; /* Tamanho parecido com títulos Hero */
+  font-size: 2.25rem; 
   font-weight: 700;
   margin-bottom: 20px;
   color: #333;
@@ -28,14 +27,46 @@
   font-weight: 600;
   margin: 20px 0 10px;
   color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.locations-info h3 i {
+  color: #7CB518;
+  font-size: 1.3rem;
+  min-width: 20px;
 }
 
 .locations-info p {
-  font-size: 1rem; /* Base Hero subtitle */
+  font-size: 1rem; 
   font-weight: 400;
   color: #666;
   margin: 6px 0;
   line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.locations-info p i {
+  font-size: 0.9rem;
+  margin-top: 3px;
+  min-width: 15px;
+  flex-shrink: 0;
+}
+
+.locations-info p i.fa-map-marker-alt {
+  color: #e74c3c;
+}
+
+.locations-info p i.fa-clock {
+  color: #2196F3;
+}
+
+.locations-info h4 i {
+  color: #7CB518;
+  margin-right: 8px;
 }
 
 .locations-map {
@@ -52,6 +83,15 @@
     grid-template-columns: 1fr;
     text-align: center;
     gap: 30px;
+  }
+
+  .locations-info h3 {
+    justify-content: center;
+  }
+
+  .locations-info p {
+    justify-content: center;
+    text-align: left;
   }
 
   .locations-map {

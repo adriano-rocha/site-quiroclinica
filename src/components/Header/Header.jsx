@@ -25,10 +25,18 @@ const Header = () => {
   };
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (sectionId === 'home') {
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
+    
+    
     if (mobileMenuActive) {
       setMobileMenuActive(false);
       document.body.style.overflow = 'unset';
@@ -40,7 +48,7 @@ const Header = () => {
     { id: 'sobre', label: 'Sobre' },
     { id: 'resultados', label: 'Resultados' },
     { id: 'localizacao', label: 'Localização' },
-    { id: 'contato', label: 'Contato' }
+    { id: 'agendamento', label: 'Contato' } 
   ];
 
   return (

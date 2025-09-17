@@ -1,201 +1,174 @@
-/* IMPORTAÇÃO DA FONTE POPPINS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 .reviews {
-  --visible: 3; /* default (sobrescrito pelo JSX) */
-  --total: 6;   /* default (sobrescrito pelo JSX) */
-  padding: 60px 20px;
-  text-align: center;
-  background: #f9f9f9;
+  width: 100%;
+  padding: 100px 24px;
+  background: #f2f2f2;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  box-sizing: border-box;
+  color: #333;
 }
 
-/* títulos */
-.reviews__title {
-  font-size: 2.2rem;
-  font-weight: 500; 
-  margin-bottom: 15px;
-  color: blue;
-  letter-spacing: -0.02em;
-}
-
-.reviews__title:first-child {
-  font-size: 1.4rem;
-  font-weight: 800; 
-  color: black;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* container geral */
 .reviews__container {
-  position: relative;
-  max-width: 900px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 10px 10px;
 }
 
-/* janela visível (crop) */
-.reviews__window {
+.reviews__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reviews__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0c0c0c;
+  margin: 0;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.reviews__subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: blue;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  align-items: start;
+  justify-items: center;
+}
+
+.reviews__card {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: none;
 }
 
-/* inner - largura calculada com base em visible/total */
-.reviews__inner {
-  display: flex;
-  transition: transform 0.5s ease;
-  width: calc((100% / var(--visible)) * var(--total));
-  box-sizing: border-box;
-  gap: 8px;
+.reviews__card:hover {
+  transform: scale(1.03);
 }
 
-/* cada item */
-.reviews__item {
-  flex: 0 0 calc(100% / var(--total));
-  padding: 6px;
-  box-sizing: border-box;
-}
-
-/* imagens */
-.reviews__img {
+.reviews__image-wrapper {
   width: 100%;
   height: auto;
-  max-height: 400px;
-  display: block;
-  object-fit: contain; /* garante que a imagem não seja cortada */
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.reviews__img:hover {
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-}
-
-/* arrows */
-.reviews__arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.9);
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: all 0.2s ease;
+  background: white;
+  min-height: 200px;
 }
 
-.reviews__arrow:hover {
-  transform: translateY(-50%) scale(1.05);
-  background: #fff;
-  border-color: rgba(0,51,102,0.15);
-  color: #7cb518;
+.reviews__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 500px;
+  border-radius: 12px;
+  max-width: 100%;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
-.reviews__arrow--left {
-  left: -15px;
+.reviews__image[src*="data:image/svg"] {
+  opacity: 0.6;
+  filter: grayscale(1);
 }
 
-.reviews__arrow--right {
-  right: -15px;
-}
-
-/* indicadores */
-.reviews__indicators {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 20px;
-}
-
-.reviews__indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 1px solid rgba(0,51,102,0.4);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.reviews__indicator:hover {
-  border-color: #7cb518;
-  background: rgba(124, 181, 24, 0.2);
-}
-
-
-
-/* responsivo */
 @media (max-width: 992px) {
+  .reviews {
+    padding: 100px 24px;
+  }
+  
+  .reviews__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
   .reviews__title {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
   }
   
-  .reviews__title:first-child {
-    font-size: 1.2rem;
-  }
-
-  .reviews__arrow {
-    width: 34px;
-    height: 34px;
-    font-size: 14px;
-  }
-  
-  .reviews__img {
-    max-height: 350px;
+  .reviews__subtitle {
+    font-size: 1.4rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .reviews {
-    padding: 40px 15px;
-  }
-  
-  .reviews__title {
-    font-size: 1.5rem;
-  }
-  
-  .reviews__title:first-child {
-    font-size: 1rem;
-  }
-
-  .reviews__arrow {
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
-  }
-  
-  .reviews__arrow--left {
-    left: -10px;
-  }
-  
-  .reviews__arrow--right {
-    right: -10px;
-  }
-
-  .reviews__img {
-    max-height: 280px;
+    padding: 100px 24px;
   }
   
   .reviews__container {
-    padding: 5px;
+    max-width: 100%;
+  }
+  
+  .reviews__header {
+    margin-bottom: 30px;
+  }
+  
+  .reviews__title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding: 0 10px;
+  }
+  
+  .reviews__subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .reviews__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
+  .reviews__card {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .reviews__item {
-    height: 180px;
+  .reviews {
+    padding: 100px 24px;
+  }
+  
+  .reviews__title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .reviews__subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .reviews__grid {
+    gap: 15px;
+    max-width: 100%;
+  }
+  
+  .reviews__card {
+    border-radius: 12px;
+  }
+  
+  .reviews__image {
+    border-radius: 12px;
   }
 }

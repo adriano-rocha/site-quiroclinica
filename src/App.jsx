@@ -1,12 +1,13 @@
 import "./App.css";
-import About from "./components/About/About";
-import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Videos from "./components/Videos/Videos";
+import About from "./components/About/About";
 import Results from "./components/Results/Results";
-import Locations from "./components/Locations/Locations";
+import Videos from "./components/Videos/Videos";
 import Reviews from "./components/Reviews/Reviews";
+import ContactForm from "./components/ContactForm/ContactForm";
+import Locations from "./components/Locations/Locations";
+import Footer from "./components/Footer/Footer";
 import WhatsAppFloat from "./components/whatsAppFloat/whatsAppFloat";
 
 function App() {
@@ -15,13 +16,19 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Videos />
-      <Results />
+
+      <section id="resultados">
+        <Results />
+        <Videos />
+      </section>
+
+      <ContactForm />
       <Locations />
       <Reviews />
-      <WhatsAppFloat />
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }
+
 export default App;

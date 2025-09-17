@@ -2,7 +2,7 @@ import React from 'react';
 import './Videos.css';
 
 const Videos = () => {
-  // Dados dos vídeos
+  
   const videosData = [
     {
       id: 1,
@@ -14,7 +14,7 @@ const Videos = () => {
       id: 2,
       src: '/videos/dep2.mp4',
       title: 'Coluna Tratada, Postura Renovada',
-      description: 'Marcos encontrou no Vinicius o melhor quiropraxista. Coluna alinhada e postura corrigida!'
+      description: 'Marcos encontrou no Vinnicius o melhor quiropraxista. Coluna alinhada e postura corrigida!'
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const Videos = () => {
   return (
     <section className="videos-section">
       <div className="videos-container">
-        <h2 className="videos-title">Pacientes Transformados</h2>
+        <h3 className="videos-title">Pacientes Transformados</h3>
         <div className="videos-grid">
           {videosData.map((video) => (
             <div key={video.id} className="video-item">
@@ -36,7 +36,7 @@ const Videos = () => {
                   className="video-player"
                   controls
                   preload="metadata"
-                  poster={`/videos/thumb-${video.id}.jpg`} // opcional: thumbnail
+                  poster={`/videos/thumb-${video.id}.jpg`} 
                 >
                   <source src={video.src} type="video/mp4" />
                   Seu navegador não suporta vídeos HTML5.

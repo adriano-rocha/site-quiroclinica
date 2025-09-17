@@ -62,7 +62,7 @@
 }
 
 .highlight {
-  color: #7cb518; 
+  color: #7CB518;
   font-weight: 600;
 }
 
@@ -99,7 +99,7 @@
   padding-left: 20px;
 }
 
-/* Bullet points personalizados */
+
 .about-education li::before,
 .about-benefits li::before {
   content: '•';
@@ -116,7 +116,7 @@
   font-weight: 600;
 }
 
-/* Destaque especial para palavras-chave */
+
 .keyword {
   color: #7cb518; 
   font-weight: 600;

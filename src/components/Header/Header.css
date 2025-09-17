@@ -1,4 +1,3 @@
-/* ===== HEADER BASE ===== */
 .header {
   position: fixed;
   top: 0;
@@ -7,7 +6,7 @@
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   border-bottom: 1px solid rgba(46, 204, 113, 0.1);
 }
 
@@ -22,19 +21,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 20px; /* mantém altura original */
+  padding: 6px 20px;
   max-width: 1400px;
   margin: 0 auto;
-  height: 92px; /* altura fixa para manter consistência */
+  height: 92px;
 }
 
-/* ===== LOGO ===== */
 .logo img {
-  height: 120px; /* 80px + 50% */
+  height: 120px;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-  margin: -16px 0; /* compensa altura extra sem afetar o container */
+  margin: -16px 0;
 }
 
 .logo img:hover {
@@ -42,10 +40,9 @@
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
 }
 
-/* ===== DIVISOR VERDE - Inspirado no Instituto Malvino ===== */
 .header-divider {
   position: fixed;
-  top: 92px; /* altura do header */
+  top: 92px;
   left: 0;
   width: 100%;
   height: 6px;
@@ -56,11 +53,12 @@
 .green-line {
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, 
-    #2ecc71 0%, 
-    #27ae60 25%, 
-    #2ecc71 50%, 
-    #27ae60 75%, 
+  background: linear-gradient(
+    90deg,
+    #2ecc71 0%,
+    #27ae60 25%,
+    #2ecc71 50%,
+    #27ae60 75%,
     #2ecc71 100%
   );
   position: relative;
@@ -68,15 +66,16 @@
 }
 
 .green-line::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.4) 50%, 
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
     transparent 100%
   );
   animation: shimmer 3s infinite ease-in-out;
@@ -94,9 +93,8 @@
   }
 }
 
-/* Efeito quando o header está scrolled */
 .header.scrolled + .header-divider {
-  top: 92px; /* mantém mesma posição */
+  top: 92px;
   height: 4px;
 }
 
@@ -104,7 +102,6 @@
   opacity: 0.9;
 }
 
-/* ===== NAV DESKTOP ===== */
 .desktop-nav {
   display: flex;
 }
@@ -137,7 +134,7 @@
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 3px;
@@ -153,14 +150,12 @@
   width: 100%;
 }
 
-/* ===== ACTIONS ===== */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* LANGUAGE SELECTOR DESKTOP */
 .language-selector {
   display: flex;
   gap: 12px;
@@ -203,14 +198,12 @@
   transition: all 0.4s ease;
 }
 
-/* ===== MOBILE ACTIONS ===== */
 .mobile-actions {
   display: none;
   align-items: center;
   gap: 16px;
 }
 
-/* ===== BANDEIRAS MOBILE ===== */
 .mobile-flags {
   display: flex;
   gap: 10px;
@@ -234,7 +227,6 @@
   border-radius: 50%;
 }
 
-/* ===== MENU HAMBURGUER ===== */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -277,7 +269,6 @@
   background: linear-gradient(90deg, #e74c3c, #c0392b);
 }
 
-/* ===== MENU MOBILE ===== */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -344,7 +335,7 @@
 }
 
 .mobile-nav-link::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -361,7 +352,7 @@
 }
 
 .mobile-nav-link::after {
-  content: '→';
+  content: "→";
   position: absolute;
   right: 0;
   opacity: 0;
@@ -376,24 +367,26 @@
   transform: translateX(0);
 }
 
-
 .menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(46, 204, 113, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(46, 204, 113, 0.1)
+  );
   backdrop-filter: blur(8px);
   z-index: 1000;
 }
-
 
 @media (max-width: 1200px) {
   .container {
     padding: 6px 24px;
   }
-  
+
   .nav-list {
     gap: 24px;
   }
@@ -417,12 +410,12 @@
   }
 
   .logo img {
-    height: 105px; 
+    height: 105px;
     margin: -16px 0;
   }
 
   .container {
-    height: 73px; 
+    height: 73px;
   }
 
   .header-divider {
@@ -459,12 +452,12 @@
 @media (max-width: 576px) {
   .container {
     padding: 8px 14px;
-    height: 68px; 
+    height: 68px;
   }
 
   .logo img {
-    height: 90px; /* 60px + 50% */
-    margin: -11px 0; /* compensa sem afetar altura do header */
+    height: 90px;
+    margin: -11px 0;
   }
 
   .flag-image-mobile-small {
@@ -497,7 +490,6 @@
   }
 }
 
-/* ===== ANIMAÇÕES EXTRAS ===== */
 @media (prefers-reduced-motion: no-preference) {
   .header {
     animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -520,7 +512,8 @@
 }
 
 @keyframes greenPulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
   }
   50% {
@@ -528,9 +521,10 @@
   }
 }
 
-/* ===== ACESSIBILIDADE ===== */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
