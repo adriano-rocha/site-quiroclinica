@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import './WhatsAppFloat.css';
+import './WhatsAppFloatButton.css';
 
-const WhatsAppFloat = () => {
+const WhatsAppFloatButton = () => {
   const { t } = useTranslation();
 
   const openWhatsApp = useCallback(() => {
@@ -33,4 +33,4 @@ const WhatsAppFloat = () => {
   );
 };
 
-export default React.memo(WhatsAppFloat);
+export default React.memo(WhatsAppFloatButton);
