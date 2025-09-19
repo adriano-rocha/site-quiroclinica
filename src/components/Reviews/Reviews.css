@@ -181,7 +181,7 @@
 @media (max-width: 480px) {
   .reviews-section {
     margin-top: 100px; 
-    padding-top: 20px; 
+    padding: 20px 20px 40px 20px; /* Reduzi padding-bottom */
     position: relative; 
     z-index: 1; 
   }
@@ -195,7 +195,8 @@
     max-width: 100%;
     margin: 0 auto;
     overflow: visible;
-    padding-bottom: 8px;
+    padding-bottom: 20px; /* Reduzi padding-bottom */
+    position: relative;
   }
 
   .reviews-track {
@@ -235,35 +236,55 @@
   }
 
   
+  /* SETAS NAS EXTREMIDADES DOS CARDS - Mobile */
   .carousel-controls {
-    position: relative; 
-    bottom: auto;
-    top: auto;
-    left: auto;
-    right: auto;
-    transform: none;
+    position: absolute; 
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding: 10px 0 0 0;
-    margin-top: 6px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
     width: 100%;
+    z-index: 15;
+    pointer-events: none;
   }
 
   
   .carousel-btn {
-    background: rgba(0, 123, 255, 0.12); 
-    color: white;
-    border: 1px solid rgba(0, 123, 255, 0.14);
+    background: rgba(255, 255, 255, 0.3); /* Meio transparente */
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 8px 10px;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 50%;
-    opacity: 0.95;
-    box-shadow: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 36px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Reativar para os botões */
+    backdrop-filter: blur(5px);
   }
 
-  .carousel-btn:hover {
-    background: rgba(0, 86, 179, 0.18);
+  .carousel-btn.prev {
+    transform: translateX(-50%); /* Empurra seta esquerda para fora */
+  }
+
+  .carousel-btn.next {
+    transform: translateX(50%); /* Empurra seta direita para fora */
+  }
+
+  .carousel-btn:hover,
+  .carousel-btn:active {
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   
@@ -271,6 +292,18 @@
     .reviews-card {
       flex: 0 0 100%;
       max-width: 100%;
+    }
+    
+    .carousel-controls {
+      bottom: auto; /* Remove o posicionamento inferior */
+      gap: auto; /* Remove gap */
+    }
+    
+    .carousel-btn {
+      padding: 6px 8px;
+      min-width: 32px;
+      min-height: 32px;
+      font-size: 12px;
     }
   }
 }
