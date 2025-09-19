@@ -42,6 +42,13 @@
   justify-items: center;
 }
 
+/* Força 2 vídeos por linha no desktop */
+@media (min-width: 1024px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .video-item {
   background: white;
   border-radius: 8px;
@@ -71,7 +78,6 @@
   object-fit: cover;
   display: block;
 }
-
 
 .video-player::-webkit-media-controls-panel {
   background-color: rgba(0, 0, 0, 0.8);

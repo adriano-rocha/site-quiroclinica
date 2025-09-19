@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+.strategic-cta-2 {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-top: 3px solid #7CB518;
+  border-bottom: 3px solid #7CB518;
+  padding: 60px 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.strategic-cta-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="15" cy="15" r="1.2" fill="%237CB518" opacity="0.1"/><circle cx="85" cy="25" r="1.8" fill="%23ffd700" opacity="0.1"/><circle cx="25" cy="85" r="1.2" fill="%237CB518" opacity="0.1"/><circle cx="75" cy="75" r="1.8" fill="%23ffd700" opacity="0.1"/></svg>');
+  background-size: 120px 120px;
+  z-index: 1;
+}
+
+.cta-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-content {
+  background: white;
+  border-radius: 20px;
+  padding: 45px 35px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.cta-content::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #7CB518, #ffd700, #7CB518);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.cta-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: #744210;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  animation: starGlow 2s ease-in-out infinite;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+@keyframes starGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+  }
+}
+
+.cta-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cta-description {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-description strong {
+  color: #7CB518;
+  font-weight: 600;
+}
+
+/* Estatísticas */
+.cta-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(124, 181, 24, 0.2);
+  min-width: 120px;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #7CB518;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #4a5568;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Prova Social */
+.cta-social-proof {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border-left: 4px solid #ffd700;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.proof-text {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #92400e;
+  font-style: italic;
+}
+
+.proof-text strong {
+  color: #7CB518;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cta-urgency {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-left: 4px solid #7CB518;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.cta-urgency p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #166534;
+}
+
+.cta-urgency strong {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #7CB518, #628e14);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(124, 181, 24, 0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #628e14, #4a6b0f);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(124, 181, 24, 0.6);
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+}
+
+.cta-guarantee {
+  font-size: 0.8rem;
+  color: #718096;
+  font-style: italic;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .strategic-cta-2 {
+    padding: 40px 0;
+  }
+
+  .cta-content {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+
+  .cta-title {
+    font-size: 1.6rem;
+  }
+
+  .cta-description {
+    font-size: 0.9rem;
+  }
+
+  .cta-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stat-item {
+    min-width: 100px;
+    padding: 12px 16px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .strategic-cta-2 {
+    padding: 30px 0;
+  }
+
+  .cta-content {
+    padding: 25px 15px;
+    border-radius: 15px;
+  }
+
+  .cta-title {
+    font-size: 1.4rem;
+    line-height: 1.1;
+  }
+
+  .cta-description {
+    font-size: 0.85rem;
+  }
+
+  .cta-badge {
+    font-size: 0.7rem;
+    padding: 6px 15px;
+  }
+
+  .stat-item {
+    padding: 10px 12px;
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .cta-social-proof {
+    padding: 15px;
+  }
+
+  .proof-text {
+    font-size: 0.8rem;
+  }
+
+  .cta-urgency {
+    padding: 12px 15px;
+  }
+
+  .cta-urgency p {
+    font-size: 0.8rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 12px 25px;
+  }
+
+  .cta-guarantee {
+    font-size: 0.75rem;
+  }
+}
