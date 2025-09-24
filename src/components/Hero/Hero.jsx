@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from 'react-i18next';
 import "./Hero.css";
 
 const images = [
@@ -8,63 +9,20 @@ const images = [
   "/images/img4.jpeg",
 ];
 
-const slideContent = [
-  {
-    title: "Sofre com Dor Lombar, Ciática ou Coluna Travada?",
-    subtitle: "Tratamento de Quiropraxia no Rio de Janeiro que resolve a CAUSA da dor, não só alivia temporariamente.",
-    buttonText: "Agende sua Avaliação JÁ",
-    symptoms: [
-      "Dor lombar constante",
-      "Travamento da coluna", 
-      "Dificuldade para levantar ou andar",
-      "Dor que irradia para as pernas"
-    ]
-  },
-  {
-    title: "Dor nas Costas Limitando sua Vida?",
-    subtitle: "Mais de 10 anos tratando hérnias de disco, nervo ciático e dores crônicas com resultados comprovados.",
-    buttonText: "Fale com Especialista Agora",
-    symptoms: [
-      "Hérnia de disco",
-      "Nervo ciático inflamado",
-      "Dores que pioram sentado",
-      "Formigamento nas pernas"
-    ]
-  },
-  {
-    title: "Cansado de Tomar Remédios para Dor?",
-    subtitle: "Descubra como a Quiropraxia elimina a dor sem medicamentos, tratando a raiz do problema.",
-    buttonText: "Quero Tratamento Definitivo",
-    symptoms: [
-      "Dependência de anti-inflamatórios",
-      "Dor que sempre volta",
-      "Efeitos colaterais dos remédios",
-      "Sem melhora duradoura"
-    ]
-  },
-  {
-    title: "Dor Impedindo Você de Trabalhar?",
-    subtitle: "Centenas de pacientes recuperaram sua qualidade de vida. Você pode ser o próximo!",
-    buttonText: "Garanta sua Vaga Hoje",
-    symptoms: [
-      "Faltas no trabalho por dor",
-      "Dificuldade para se concentrar", 
-      "Noites mal dormidas",
-      "Limitações nas atividades"
-    ]
-  }
-];
-
 const Hero = () => {
+  const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showQuickForm, setShowQuickForm] = useState(false);
+
+  // Carrega os slides traduzidos do JSON
+  const slideContent = t('hero.slides', { returnObjects: true });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 6000); // Aumentei para 6s para dar tempo de ler
+    }, 6000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -80,7 +38,7 @@ const Hero = () => {
     const phoneNumber = "5521965928971";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
-  }, [currentImageIndex]);
+  }, [currentImageIndex, slideContent]);
 
   const openQuickForm = () => {
     setShowQuickForm(true);
@@ -95,6 +53,11 @@ const Hero = () => {
     setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   const prevSlide = () =>
     setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+
+  // Proteção caso os slides ainda não tenham carregado
+  if (!slideContent || !Array.isArray(slideContent)) {
+    return <div>Carregando...</div>;
+  }
 
   const currentSlide = slideContent[currentImageIndex];
 
@@ -148,7 +111,7 @@ const Hero = () => {
       <button
         className="hero-arrow hero-arrow-left"
         onClick={prevSlide}
-        aria-label="Slide anterior"
+        aria-label={t('hero.navigation.prevSlide')}
       >
         <svg
           width="18"
@@ -165,7 +128,7 @@ const Hero = () => {
       <button
         className="hero-arrow hero-arrow-right"
         onClick={nextSlide}
-        aria-label="Próximo slide"
+        aria-label={t('hero.navigation.nextSlide')}
       >
         <svg
           width="18"
@@ -181,22 +144,22 @@ const Hero = () => {
 
       <div className="hero-container">
         <div className="hero-content">
-          {/* Conteúdo Superior */}
+          
           <div className="hero-top-content">
-            {/* Badge de Urgência - MELHORADO */}
+            
             <div className="hero-urgency-badge">
-              🚨 VAGAS LIMITADAS HOJE - Apenas 3 horários disponíveis
+              {t('hero.urgencyBadge')}
             </div>
 
             <h1 className="hero-title">{currentSlide.title}</h1>
             <p className="hero-subtitle">{currentSlide.subtitle}</p>
           </div>
 
-          {/* Conteúdo Inferior */}
+          
           <div className="hero-bottom-content">
-            {/* Sintomas em Lista - MELHORADOS */}
+            
             <div className="hero-symptoms">
-              <p className="symptoms-intro">Você sente alguns destes sintomas?</p>
+              <p className="symptoms-intro">{t('hero.symptomsIntro')}</p>
               <ul className="symptoms-list">
                 {currentSlide.symptoms.map((symptom, index) => (
                   <li key={index} className="symptom-item">
@@ -206,22 +169,22 @@ const Hero = () => {
               </ul>
             </div>
 
-            {/* Botões CTA - MELHORADOS */}
+            
             <div className="hero-cta-buttons">
               <button className="hero-cta-btn primary" onClick={openWhatsApp} type="button">
                 📱 {currentSlide.buttonText}
               </button>
               <button className="hero-cta-btn secondary" onClick={openQuickForm} type="button">
-                ⚡ Formulário Rápido
+                ⚡ {t('hero.quickForm.buttonText')}
               </button>
             </div>
 
-            {/* Prova Social Rápida - MELHORADA */}
+            
             <div className="hero-social-proof">
               <div className="social-stats">
-                <span className="stat">⭐ 4.9/5 avaliação</span>
-                <span className="stat">✅ 500+ pacientes</span>
-                <span className="stat">🏆 10+ anos</span>
+                <span className="stat">{t('hero.socialProof.rating')}</span>
+                <span className="stat">{t('hero.socialProof.patients')}</span>
+                <span className="stat">{t('hero.socialProof.experience')}</span>
               </div>
             </div>
           </div>
@@ -236,18 +199,18 @@ const Hero = () => {
               index === currentImageIndex ? "active" : ""
             }`}
             onClick={() => goToSlide(index)}
-            aria-label={`Ir para slide ${index + 1}`}
+            aria-label={`${t('hero.navigation.goToSlide')} ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Modal de Formulário Rápido */}
+      
       {showQuickForm && (
         <div className="quick-form-overlay" onClick={closeQuickForm}>
           <div className="quick-form-modal" onClick={(e) => e.stopPropagation()}>
             <button className="quick-form-close" onClick={closeQuickForm}>✕</button>
-            <h3>⚡ Agendamento Rápido</h3>
-            <p>Preencha em 30 segundos e receba contato imediato:</p>
+            <h3>{t('hero.quickForm.title')}</h3>
+            <p>{t('hero.quickForm.subtitle')}</p>
             
             <form className="quick-form" onSubmit={(e) => {
               e.preventDefault();
@@ -269,28 +232,28 @@ const Hero = () => {
               <input 
                 type="text" 
                 name="nome" 
-                placeholder="Seu nome completo" 
+                placeholder={t('hero.quickForm.fields.name')} 
                 required 
                 className="quick-input"
               />
               <input 
                 type="tel" 
                 name="whatsapp" 
-                placeholder="WhatsApp (21) 99999-9999" 
+                placeholder={t('hero.quickForm.fields.whatsapp')} 
                 required 
                 className="quick-input"
               />
               <select name="queixa" required className="quick-input">
-                <option value="">Sua principal queixa:</option>
-                <option value="Dor lombar/lombalgia">Dor lombar/lombalgia</option>
-                <option value="Hérnia de disco">Hérnia de disco</option>
-                <option value="Nervo ciático/ciatalgia">Nervo ciático/ciatalgia</option>
-                <option value="Dor cervical/pescoço">Dor cervical/pescoço</option>
-                <option value="Travamento da coluna">Travamento da coluna</option>
-                <option value="Outros">Outros</option>
+                <option value="">{t('hero.quickForm.fields.complaints.placeholder')}</option>
+                <option value={t('hero.quickForm.fields.complaints.lombar')}>{t('hero.quickForm.fields.complaints.lombar')}</option>
+                <option value={t('hero.quickForm.fields.complaints.hernia')}>{t('hero.quickForm.fields.complaints.hernia')}</option>
+                <option value={t('hero.quickForm.fields.complaints.sciatica')}>{t('hero.quickForm.fields.complaints.sciatica')}</option>
+                <option value={t('hero.quickForm.fields.complaints.cervical')}>{t('hero.quickForm.fields.complaints.cervical')}</option>
+                <option value={t('hero.quickForm.fields.complaints.locked')}>{t('hero.quickForm.fields.complaints.locked')}</option>
+                <option value={t('hero.quickForm.fields.complaints.others')}>{t('hero.quickForm.fields.complaints.others')}</option>
               </select>
               <button type="submit" className="quick-submit-btn">
-                🚀 Receber Contato AGORA
+                {t('hero.quickForm.submitBtn')}
               </button>
             </form>
           </div>

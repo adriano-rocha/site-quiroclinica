@@ -1,41 +1,439 @@
 {
   "header": {
-    "logoAlt": "Chiropractic Clinic - Chiropractic, Acupuncture and Advanced Therapies",
     "nav": {
       "home": "Home",
       "about": "About",
       "results": "Results",
       "location": "Location",
-      "contact": "Contact"
-    },
-    "scheduleButton": "Book Appointment",
-    "language": "Language",
-    "toggleMenu": "Open menu",
-    "whatsappMessage": "Hello! I'd like to schedule an appointment at the Chiropractic Clinic."
+      "contact": "Contact" 
+    }
   },
   "hero": {
+    "urgencyBadge": "🚨 LIMITED SPOTS TODAY - Only 3 appointments available",
+    "symptomsIntro": "Do you feel any of these symptoms?",
     "slides": [
       {
-        "title": "Chiropractic Clinic",
-        "subtitle": "Personalized care with fast and effective results for chronic pain, muscle rehabilitation and wellbeing.",
-        "buttonText": "BOOK APPOINTMENT"
+        "title": "Suffering from Lower Back Pain, Sciatica or Locked Spine?",
+        "subtitle": "Chiropractic treatment in Rio de Janeiro that solves the CAUSE of pain, not just temporary relief.",
+        "buttonText": "Schedule your Evaluation NOW",
+        "symptoms": [
+          "Constant lower back pain",
+          "Spine lock-up", 
+          "Difficulty getting up or walking",
+          "Pain radiating to legs"
+        ]
       },
       {
-        "title": "Transform Your Health",
-        "subtitle": "Specialized treatments in chiropractic and acupuncture. Take care of your body with experts.",
-        "buttonText": "REQUEST CARE"
+        "title": "Back Pain Limiting your Life?",
+        "subtitle": "Over 10 years treating disc hernias, sciatic nerve and chronic pain with proven results.",
+        "buttonText": "Talk to Specialist Now",
+        "symptoms": [
+          "Disc hernia",
+          "Inflamed sciatic nerve",
+          "Pain worsens when sitting",
+          "Leg tingling"
+        ]
       },
       {
-        "title": "Back Pain?",
-        "subtitle": "Our treatments focus on long-lasting results. Book your appointment and feel the difference.",
-        "buttonText": "BOOK APPOINTMENT"
+        "title": "Tired of Taking Pain Medication?",
+        "subtitle": "Discover how Chiropractic eliminates pain without drugs, treating the root of the problem.",
+        "buttonText": "I Want Definitive Treatment",
+        "symptoms": [
+          "Anti-inflammatory dependency",
+          "Pain always comes back",
+          "Medicine side effects",
+          "No lasting improvement"
+        ]
       },
       {
-        "title": "Get to Know Our Clinic",
-        "subtitle": "Complete structure and qualified professionals to take care of your health with excellence.",
-        "buttonText": "LEARN MORE"
+        "title": "Pain Preventing you from Working?",
+        "subtitle": "Hundreds of patients recovered their quality of life. You could be next!",
+        "buttonText": "Secure your Spot Today",
+        "symptoms": [
+          "Work absences due to pain",
+          "Difficulty concentrating", 
+          "Poor sleep nights",
+          "Activity limitations"
+        ]
       }
     ],
-    "whatsappMessage": "Hello! I'd like to schedule an appointment at the Chiropractic Clinic."
+    "quickForm": {
+      "buttonText": "Quick Form",
+      "title": "⚡ Quick Appointment",
+      "subtitle": "Fill in 30 seconds and receive immediate contact:",
+      "fields": {
+        "name": "Your full name",
+        "whatsapp": "WhatsApp (21) 99999-9999",
+        "complaint": "Your main complaint:",
+        "complaints": {
+          "placeholder": "Your main complaint:",
+          "lombar": "Lower back pain/lumbago",
+          "hernia": "Disc hernia",
+          "sciatica": "Sciatic nerve/sciatica",
+          "cervical": "Cervical/neck pain",
+          "locked": "Spine lock-up",
+          "others": "Others"
+        }
+      },
+      "submitBtn": "🚀 Get Contact NOW"
+    },
+    "socialProof": {
+      "rating": "⭐ 4.9/5 rating",
+      "patients": "✅ 500+ patients",
+      "experience": "🏆 10+ years"
+    },
+    "navigation": {
+      "prevSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "goToSlide": "Go to slide"
+    }
+  },
+  "about": {
+    "title": "The Specialist Who Will End Your Pain",
+    "painIntro": "10 years solving pains that other professionals can't.",
+    "painIntroSub": "If you're suffering from lower back pain, disc hernia or sciatic nerve, you came to the right place.",
+    "stats": {
+      "patients": {
+        "number": "500+",
+        "label": "Pain-free patients"
+      },
+      "success": {
+        "number": "95%",
+        "label": "Success rate"
+      },
+      "experience": {
+        "number": "10+",
+        "label": "Years of experience"
+      }
+    },
+    "doctorName": "Dr. Vinnicius de Paula",
+    "description": "Specialist in ending chronic pain using advanced techniques of Chiropractic, Acupuncture and Massage Therapy. My patients arrive suffering and leave pain-free.",
+    "problemsSolved": {
+      "title": "I solve problems like:",
+      "problems": [
+        "🔥 Chronic lower back pain",
+        "💥 Disc hernia",
+        "⚡ Inflamed sciatic nerve",
+        "😣 Cervical and neck pain",
+        "🔒 Spine lock-up",
+        "💪 Muscle tensions"
+      ]
+    },
+    "credentials": {
+      "title": "Specialized training:",
+      "items": [
+        "IBRAQUI-SP (Chiropractic)",
+        "ACABO-RJ (Acupuncture)",
+        "IBTED-RJ (Massage Therapy)"
+      ]
+    },
+    "whyChoose": {
+      "title": "Why my patients choose to continue with me:",
+      "benefits": [
+        "✓ Techniques that attack the CAUSE of pain, not just symptoms",
+        "✓ Visible results from the first session",
+        "✓ Service in Rio's Center - easy access",
+        "✓ More than a decade saving lives from chronic pain"
+      ]
+    },
+    "cta": {
+      "urgencyTitle": "Your pain won't go away by itself.",
+      "urgencySubtitle": "Every day you wait is another day of unnecessary suffering.",
+      "button": "🚀 Talk to Me Now and End Your Pain",
+      "guarantee": "🔒 Confidential conversation | 📞 We respond quickly"
+    },
+    "badges": {
+      "years": "10+ Years",
+      "patients": "500+ Patients"
+    },
+    "alt": "Dr. Vinnicius de Paula - Chiropractic Specialist"
+  },
+  "results": {
+    "title": "Proven Results",
+    "intro": {
+      "part1": "At ",
+      "highlight1": "Quiroclinica",
+      "part2": ", each patient experiences a",
+      "highlight2": " complete transformation",
+      "part3": " through our ",
+      "highlight3": "personalized and effective treatments",
+      "part4": "."
+    },
+    "cards": [
+      {
+        "id": 1,
+        "icon": "🎯",
+        "title": "Immediate Pain Relief",
+        "description": "Visible results from the first session with advanced <strong>chiropractic</strong> techniques and personalized treatment."
+      },
+      {
+        "id": 2,
+        "icon": "⚡",
+        "title": "Effective Postural Correction",
+        "description": "Significant posture improvement through <span class=\"keyword\">precise adjustments</span> and specific therapeutic exercises."
+      },
+      {
+        "id": 3,
+        "icon": "💪",
+        "title": "Muscle Strengthening",
+        "description": "Development of supporting muscles for <strong>prevention</strong> of future injuries and pain."
+      }
+    ],
+    "urgency": {
+      "limitedSpots": "Limited spots due to high demand.",
+      "callToAction": "⚠️ Don't postpone caring for your health — your body deserves to be free from pain!"
+    },
+    "whatsappButton": "Schedule via WhatsApp"
+  },
+  "videos": {
+    "title": "Transformed Patients",
+    "browserError": "Your browser does not support HTML5 videos.",
+    "testimonials": [
+      {
+        "id": 1,
+        "src": "/videos/dep01.mp4",
+        "title": "Complete Relief from Shoulder Pain",
+        "description": "Ivanira came to us with intense shoulder and neck pain. After treatment, she not only overcame the discomfort, but achieved such an impressive result that today she makes sure to recommend the experience to everyone she knows."
+      },
+      {
+        "id": 2,
+        "src": "/videos/dep02.mp4",
+        "title": "From Surgery to Cure: André's Transformation with Chiropractic",
+        "description": "After being diagnosed with two herniated discs and recommended for surgery, André found in treatment with Vinnicius the solution that changed his life. He recovered his movements and today walks without pain. Gratitude and renewed quality of life!"
+      },
+      {
+        "id": 4,
+        "src": "/videos/dep03.mp4",
+        "title": "Unique Techniques, Spectacular Results",
+        "description": "Meet Thali's story, who discovered in integrated treatment the solution for her pain. Combining chiropractic with the benefits of Chinese medicine and acupuncture, she achieved an incredible result: zero pain and a new quality of life."
+      },
+      {
+        "id": 3,
+        "src": "/videos/dep04.mp4",
+        "title": "Spine Treated, Posture Renewed",
+        "description": "Marcos lived with pain and posture problems, but found in Vinnicius the solution he was looking for. With specialized treatment, he not only aligned his spine and corrected his posture, but also recovered his quality of life. Today, he is living proof that chiropractic, when performed by a professional of excellence, makes all the difference."
+      }
+    ]
+  },
+  "strategicCTA1": {
+    "badge": "🔥 REAL TRANSFORMATION",
+    "title": "Want to Have Results Like These Patients?",
+    "description": {
+      "part1": "You just saw people who ",
+      "highlight1": "suffered from pain",
+      "part2": " exactly like you. Today they live ",
+      "highlight2": "pain-free",
+      "part3": " and with renewed ",
+      "highlight3": "quality of life",
+      "part4": "."
+    },
+    "benefits": [
+      "✅ Relief from the first session",
+      "✅ Proven results",
+      "✅ Techniques that work"
+    ],
+    "urgency": {
+      "title": "Your pain won't disappear on its own.",
+      "subtitle": "Every day that passes is more unnecessary suffering."
+    },
+    "button": "🚀 I Want That Result Too!",
+    "guarantee": "📞 Immediate service | 🔒 Confidential conversation",
+    "whatsappMessage": "🎥 *I SAW THE TESTIMONIALS AND WANT THAT RESULT!*\n\n😰 *My current situation:*\n• I suffer from constant pain\n• I want to have the same relief as those patients\n• I need a treatment that really works\n\n🎯 *I want to schedule my evaluation TODAY!*\n📞 When can I talk to the specialist?"
+  },
+  "reviews": {
+    "photoAlt": "Photo of",
+    "navigation": {
+      "prevReview": "Previous review",
+      "nextReview": "Next review",
+      "goToReview": "Go to review"
+    },
+    "testimonials": [
+      { 
+        "id": 1, 
+        "author": "Dirceu Schneider Junior", 
+        "date": "08/02/2024", 
+        "text": "I have no words to describe the work and exemplary professional that Dr. Vinnicius is. I can only thank him for the development I had with him, because living without pain is exceptional...", 
+        "photo": "/reviews/rev01.png" 
+      },
+      { 
+        "id": 2, 
+        "author": "Simone Conceição", 
+        "date": "06/11/2024", 
+        "text": "A top professional. I arrived at his office with pain, and left without it, wonderful massage, grade 1000!", 
+        "photo": "/reviews/rev02.png" 
+      },
+      { 
+        "id": 3, 
+        "author": "Fabio Emiliano", 
+        "date": "09/05/2024", 
+        "text": "It was an incredible experience, just one session and I left without any pain... Enormous relief, I'm very satisfied, you can trust, I highly recommend!", 
+        "photo": "/reviews/rev03.png" 
+      },
+      { 
+        "id": 4, 
+        "author": "Sonia Cristina", 
+        "date": "02/15/2024", 
+        "text": "Super Professional, I loved the whole procedure. Already in the first session I felt absurd improvements, I highly recommend! This one knows what he's doing, gratitude.", 
+        "photo": "/reviews/rev04.png" 
+      },
+      { 
+        "id": 5, 
+        "author": "Edgar Garcia", 
+        "date": "03/20/2024", 
+        "text": "The work performed is exceptional. Easy scheduling, well-located clinic and a VERY attentive professional. In addition to conventional chiropractic, he took time to understand my routine, to identify possible causes of poor posture. I recommend!", 
+        "photo": "/reviews/rev05.png" 
+      },
+      { 
+        "id": 6, 
+        "author": "Alessandra Vera", 
+        "date": "07/17/2024", 
+        "text": "Excellent professional, I went through my husband who has been his patient for over 2 years. I recommend!", 
+        "photo": "/reviews/rev06.png" 
+      }
+    ]
+  },
+  "strategicCTA2": {
+    "badge": "⭐ HUNDREDS OF SUCCESSES",
+    "title": "Join Hundreds of Satisfied Patients",
+    "description": {
+      "part1": "These reviews are just a ",
+      "highlight1": "small sample",
+      "part2": " of the results we achieve. ",
+      "highlight2": "More than 500 patients",
+      "part3": " have already recovered their quality of life with us."
+    },
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Patients Treated"
+      },
+      {
+        "number": "10+",
+        "label": "Years of Experience"
+      },
+      {
+        "number": "95%",
+        "label": "Satisfaction"
+      }
+    ],
+    "socialProof": [
+      {
+        "quote": "Already in the first session I felt absurd improvements",
+        "author": "Sonia Cristina"
+      },
+      {
+        "quote": "I left without any pain... Enormous relief!",
+        "author": "Fabio Emiliano"
+      }
+    ],
+    "urgency": {
+      "title": "Don't be another one suffering in silence.",
+      "subtitle": "Be the next success story!"
+    },
+    "button": "🎯 I Want to Join This Group!",
+    "guarantee": "🏆 Proven techniques | ⚡ Fast results | 💯 Specialized professional",
+    "whatsappMessage": "⭐ *I SAW THE REVIEWS AND WANT TO JOIN!*\n\n🔍 *After reading the testimonials:*\n• I see that other patients were successful\n• I want the same relief and quality of life\n• I trust Dr. Vinnicius' proven experience\n\n👥 *I WANT TO JOIN THE SATISFIED PATIENTS*\n📅 When can I schedule my first appointment?\n💬 I need more information about the treatment"
+  },
+  "contactForm": {
+    "urgencyBadge": "🚨 ONLY 3 SPOTS TODAY - Immediate Service Guaranteed",
+    "title": "Suffering from Lower Back Pain, Sciatica or Locked Spine?",
+    "symptomsQuestion": "Do you feel any of these symptoms?",
+    "symptoms": [
+      "✓ Constant lower back pain",
+      "✓ Spine lock-up",
+      "✓ Difficulty getting up",
+      "✓ Pain radiating to legs"
+    ],
+    "treatmentPromise": "Chiropractic treatment that solves the CAUSE of pain, not just relieves it!",
+    "formSubtitle": "Fill in 30 seconds and receive IMMEDIATE contact:",
+    "fields": {
+      "namePlaceholder": "Your full name",
+      "whatsappPlaceholder": "WhatsApp (21) 99999-9999",
+      "complaintPlaceholder": "Your main complaint:"
+    },
+    "complaints": [
+      {
+        "value": "Lower back pain/lumbago",
+        "label": "🔥 Lower back pain/lumbago"
+      },
+      {
+        "value": "Disc hernia",
+        "label": "💥 Disc hernia"
+      },
+      {
+        "value": "Sciatic nerve/sciatica",
+        "label": "⚡ Sciatic nerve/sciatica"
+      },
+      {
+        "value": "Cervical/neck pain",
+        "label": "😣 Cervical/neck pain"
+      },
+      {
+        "value": "Spine lock-up",
+        "label": "🔒 Spine lock-up"
+      },
+      {
+        "value": "Pain radiating to legs",
+        "label": "📍 Pain radiating to legs"
+      }
+    ],
+    "validation": {
+      "nameRequired": "Name is required",
+      "whatsappRequired": "WhatsApp is required",
+      "complaintRequired": "Select your main complaint"
+    },
+    "buttons": {
+      "submitting": "⏳ Sending...",
+      "submit": "🚀 I Want to Schedule NOW",
+      "whatsapp": "📱 Talk to Specialist NOW"
+    },
+    "benefits": [
+      "⭐ 4.9/5 rating",
+      "✅ 500+ patients",
+      "🏆 10+ years experience"
+    ],
+    "successMessage": "✅ <strong>Form sent successfully!</strong><br />Our team will contact you within 5 minutes to schedule your URGENT evaluation.",
+    "errorMessage": "Error sending form. Try via WhatsApp or reload the page.",
+    "trustIndicators": {
+      "secure": "🔒 Your data is secure",
+      "fastService": "📞 Fast service"
+    },
+    "whatsappMessage": "🚨 *QUICK FORM - QuiroClinica*\n\n👤 *Name:* {{nome}}\n📱 *WhatsApp:* {{whatsapp}}\n⚕️ *Main Complaint:* {{queixa}}\n\n🆘 *URGENT: I need care today!*\n⏰ When can I talk to the specialist?"
+  },
+  "locations": {
+    "title": "Location",
+    "address": {
+      "street": "Rua Senador Dantas, 117 – Sala 1418,",
+      "district": "Centro – Rio de Janeiro"
+    },
+    "hours": {
+      "title": "Hours",
+      "weekdays": "Monday to Friday",
+      "weekdaysTime": "08:00 AM to 8:00 PM",
+      "saturday": "Saturday",
+      "saturdayTime": "09:00 AM to 6:00 PM"
+    },
+    "appointment": "Appointments by scheduled time",
+    "mapTitle": "Clinic location"
+  },
+  "footer": {
+    "logoAlt": "Quiroclínica Logo",
+    "address": "Rua Senador Dantas, 117 – Sala 1418, Centro – Rio de Janeiro",
+    "phone": "Phone",
+    "email": "Email",
+    "notice": "Private practice. We do not provide receipts for health insurance reimbursement.",
+    "copyright": "All rights reserved.",
+    "whatsappMessage": "Hello! I would like more information about Quiroclínica.",
+    "emailSubject": "Contact - Quiroclínica"
+  },
+    "whatsappFloat": {
+    "urgentMessage": "🚨 URGENT - I'm in pain and need help!\n\n😰 Current situation:\n• Pain that is limiting my life\n• I need an effective solution\n• I can't stand this situation anymore\n\n📞 When can I speak with the specialist?\n⏰ I need care today!\n\n💬 I came from the QuiroClínica website",
+    "hoverMessage": "Pain doesn't wait!",
+    "hoverCta": "Talk to specialist NOW",
+    "buttonTitle": "Emergency: Talk to pain specialist NOW",
+    "ariaLabel": "Urgent WhatsApp contact for pain treatment",
+    "iconAlt": "WhatsApp",
+    "mobileQuestion": "Pain?",
+    "mobileAction": "Talk Now!"
   }
 }

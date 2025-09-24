@@ -15,7 +15,6 @@
   padding: 0 20px;
 }
 
-/* NOVO: Badge de urgência */
 .urgency-badge {
   background: linear-gradient(45deg, #dc3545, #ff0000);
   color: white;
@@ -46,18 +45,17 @@
   display: block;
   width: 80px;
   height: 2px;
-  background-color:#7CB518;
+  background-color: #7cb518;
   margin: 20px auto 0;
   border-radius: 2px;
 }
 
-/* NOVO: Formulário rápido */
 .quick-form-wrapper {
   background: white;
   border-radius: 16px;
   padding: 40px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border: 3px solid #7CB518;
+  border: 3px solid #7cb518;
   position: relative;
 }
 
@@ -70,7 +68,6 @@
   position: relative;
 }
 
-/* NOVO: Seção foco na dor */
 .pain-focus {
   text-align: center;
   margin-bottom: 40px;
@@ -81,7 +78,7 @@
 }
 
 .pain-focus .symptom-item {
-  background: white; /* mantém o fundo branco aqui */
+  background: white;
 }
 
 .pain-focus h3 {
@@ -110,17 +107,16 @@
 
 .treatment-promise {
   font-size: 1.1rem;
-  color: #7CB518;
+  color: #7cb518;
   font-weight: 600;
   margin: 0;
 }
 
-/* NOVO: Formulário compacto */
 .quick-contact-form {
   background: #f8f9fa;
   padding: 30px;
   border-radius: 12px;
-  border: 2px dashed #7CB518;
+  border: 2px dashed #7cb518;
 }
 
 .form-subtitle {
@@ -173,7 +169,7 @@
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #7CB518;
+  border-color: #7cb518;
   outline: none;
   box-shadow: 0 0 0 3px rgba(124, 181, 24, 0.1);
 }
@@ -198,7 +194,6 @@
   font-weight: 500;
 }
 
-/* Select customization */
 .form-group select {
   cursor: pointer;
   appearance: none;
@@ -209,7 +204,6 @@
   padding-right: 40px;
 }
 
-/* Consentimento */
 .consent-group {
   margin: 20px 0;
 }
@@ -229,7 +223,7 @@
   height: 18px;
   margin: 0;
   cursor: pointer;
-  accent-color: #7CB518;
+  accent-color: #7cb518;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -258,7 +252,6 @@
   font-family: inherit;
 }
 
-/* NOVO: CTA principal com destaque */
 .cta-main {
   background: linear-gradient(45deg, #dc3545, #ff0000);
   color: white;
@@ -271,7 +264,7 @@
 }
 
 .btn-primary {
-  background-color: #7CB518;
+  background-color: #7cb518;
   color: white;
 }
 
@@ -310,7 +303,6 @@
   transform: none;
 }
 
-/* NOVO: Benefícios rápidos */
 .quick-benefits {
   display: flex;
   justify-content: center;
@@ -323,11 +315,10 @@
 .benefit-item {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #7CB518;
+  color: #7cb518;
   text-align: center;
 }
 
-/* NOVO: Indicadores de confiança */
 .trust-indicators {
   text-align: center;
   margin-top: 30px;
@@ -350,7 +341,6 @@
   animation: slideUp 0.5s ease;
 }
 
-/* Animações */
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -365,7 +355,7 @@
 .form-group input:hover,
 .form-group select:hover,
 .form-group textarea:hover {
-  border-color: #7CB518;
+  border-color: #7cb518;
 }
 
 .form-group input::placeholder,
@@ -412,7 +402,6 @@
   animation: pulse 2s infinite;
 }
 
-/* Responsividade - MANTENDO TODAS AS EXISTENTES */
 @media (max-width: 768px) {
   .contact-form-section {
     padding: 60px 0;

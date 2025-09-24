@@ -1,22 +1,21 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-// Importação dos arquivos de tradução
-import pt from './locales/pt.json';
-import es from './locales/esp.json';
-import en from './locales/eua.json';
+import pt from "./locales/pt.json";
+import es from "./locales/esp.json";
+import en from "./locales/eua.json";
 
 const resources = {
   pt: {
-    translation: pt
+    translation: pt,
   },
   es: {
-    translation: es
+    translation: es,
   },
   en: {
-    translation: en
-  }
+    translation: en,
+  },
 };
 
 i18n
@@ -27,24 +26,24 @@ i18n
   // Inicializar configurações
   .init({
     resources,
-    fallbackLng: 'pt', // Português como padrão
-    lng: 'pt', // Idioma inicial
-    debug: true, // Ativar durante desenvolvimento
-    
+    fallbackLng: "pt",
+    lng: "pt",
+    debug: true,
+
     // Configurações de detecção
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'], // Salvar preferência no localStorage
+      order: ["localStorage", "navigator", "htmlTag"],
+      caches: ["localStorage"],
     },
 
     interpolation: {
-      escapeValue: false // React já escapa automaticamente
+      escapeValue: false,
     },
 
     // Configurações para melhor performance
     react: {
-      useSuspense: false
-    }
+      useSuspense: false,
+    },
   });
 
 export default i18n;

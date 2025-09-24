@@ -1,33 +1,14 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import "./Results.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Results = () => {
-  const resultsData = [
-    {
-      id: 1,
-      icon: "🎯",
-      title: "Alívio Imediato da Dor",
-      description:
-        "Resultados visíveis já na primeira sessão com técnicas avançadas de <strong>quiropraxia</strong> e tratamento personalizado.",
-    },
-    {
-      id: 2,
-      icon: "⚡",
-      title: "Correção Postural Efetiva",
-      description:
-        'Melhora significativa da postura através de <span class="keyword">ajustes precisos</span> e exercícios terapêuticos específicos.',
-    },
-    {
-      id: 3,
-      icon: "💪",
-      title: "Fortalecimento Muscular",
-      description:
-        "Desenvolvimento da musculatura de suporte para <strong>prevenção</strong> de futuras lesões e dores.",
-    },
-  ];
+  const { t } = useTranslation();
 
+  // Carrega os dados traduzidos do JSON
+  const resultsData = t('results.cards', { returnObjects: true });
   const CLINIC_WHATSAPP = "5521965928971";
 
   const handleWhatsAppClick = () => {
@@ -47,14 +28,16 @@ const Results = () => {
   return (
     <section className="results" id="results">
       <div className="results-container">
-        <h2 className="results-title">Resultados Comprovados</h2>
+        <h2 className="results-title">{t('results.title')}</h2>
 
         <p className="results-intro">
-          Na <span className="highlight">Quiroclínica</span>, cada paciente
-          experimenta uma
-          <span className="highlight-blue"> transformação completa</span>{" "}
-          através de nossos tratamentos{" "}
-          <span className="highlight">personalizados e eficazes</span>.
+          {t('results.intro.part1')}
+          <span className="highlight">{t('results.intro.highlight1')}</span>
+          {t('results.intro.part2')}
+          <span className="highlight-blue">{t('results.intro.highlight2')}</span>
+          {t('results.intro.part3')}
+          <span className="highlight">{t('results.intro.highlight3')}</span>
+          {t('results.intro.part4')}
         </p>
 
         <div className="results-cards">
@@ -71,10 +54,9 @@ const Results = () => {
         </div>
 
         <div>
-          <h4>Vagas limitadas devido à alta procura.</h4>
+          <h4>{t('results.urgency.limitedSpots')}</h4>
           <h4>
-            ⚠️ Não adie o cuidado com sua saúde — seu corpo merece estar livre
-            das dores!
+            {t('results.urgency.callToAction')}
           </h4>
         </div>
 
@@ -84,11 +66,9 @@ const Results = () => {
           type="button"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
-          Agendar pelo WhatsApp
+          {t('results.whatsappButton')}
         </button>
       </div>
-
-      
     </section>
   );
 };

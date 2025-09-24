@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './ContactForm.css';
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     nome: '',
     whatsapp: '',
@@ -16,7 +18,12 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
 
   const WEBHOOK_URL = 'https://quiroclinica.com.br'; 
-  const CLINIC_NUMBER = '5521965928971'; 
+  const CLINIC_NUMBER = '5521965928971';
+
+  // Carrega os dados traduzidos do JSON
+  const symptomsData = t('contactForm.symptoms', { returnObjects: true });
+  const complaintsData = t('contactForm.complaints', { returnObjects: true });
+  const benefitsData = t('contactForm.benefits', { returnObjects: true });
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -33,9 +40,9 @@ const ContactForm = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.nome.trim()) newErrors.nome = 'Nome é obrigatório';
-    if (!formData.whatsapp.trim()) newErrors.whatsapp = 'WhatsApp é obrigatório';
-    if (!formData.queixa_principal) newErrors.queixa_principal = 'Selecione sua queixa principal';
+    if (!formData.nome.trim()) newErrors.nome = t('contactForm.validation.nameRequired');
+    if (!formData.whatsapp.trim()) newErrors.whatsapp = t('contactForm.validation.whatsappRequired');
+    if (!formData.queixa_principal) newErrors.queixa_principal = t('contactForm.validation.complaintRequired');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -120,7 +127,7 @@ const ContactForm = () => {
         setShowSuccess(true);
         resetForm();
       } else {
-        alert('Erro ao enviar formulário. Tente pelo WhatsApp ou recarregue a página.');
+        alert(t('contactForm.errorMessage'));
       }
     }
 
@@ -146,16 +153,11 @@ const ContactForm = () => {
       return;
     }
 
-    const message = [
-      '🚨 *FORMULÁRIO RÁPIDO - QuiroClínica*',
-      '',
-      `👤 *Nome:* ${formData.nome}`,
-      `📱 *WhatsApp:* ${formData.whatsapp}`,
-      `⚕️ *Queixa Principal:* ${formData.queixa_principal}`,
-      '',
-      '🆘 *URGENTE: Preciso de atendimento hoje!*',
-      '⏰ Quando posso conversar com especialista?'
-    ].join('\n');
+    const message = t('contactForm.whatsappMessage', {
+      nome: formData.nome,
+      whatsapp: formData.whatsapp,
+      queixa: formData.queixa_principal
+    });
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${CLINIC_NUMBER}?text=${encodedMessage}`;
@@ -166,31 +168,29 @@ const ContactForm = () => {
   return (
     <section id="agendamento" className="contact-form-section">
       <div className="form-container">
-        {/* Badge de Urgência */}
         <div className="urgency-badge">
-          🚨 APENAS 3 VAGAS HOJE - Atendimento Imediato Garantido
+          {t('contactForm.urgencyBadge')}
         </div>
 
         <h2 className="contact-form-title">
-          Sofre com Dor Lombar, Ciática ou Coluna Travada?
+          {t('contactForm.title')}
         </h2>
 
         <div className="form-wrapper quick-form-wrapper">
           <div className="pain-focus">
-            <h3>Você sente alguns destes sintomas?</h3>
+            <h3>{t('contactForm.symptomsQuestion')}</h3>
             <div className="symptoms-grid">
-              <div className="symptom-item">✓ Dor lombar constante</div>
-              <div className="symptom-item">✓ Travamento da coluna</div>
-              <div className="symptom-item">✓ Dificuldade para levantar</div>
-              <div className="symptom-item">✓ Dor que irradia para pernas</div>
+              {symptomsData.map((symptom, index) => (
+                <div key={index} className="symptom-item">{symptom}</div>
+              ))}
             </div>
             <p className="treatment-promise">
-              <strong>Tratamento de Quiropraxia que resolve a CAUSA da dor, não só alivia!</strong>
+              <strong>{t('contactForm.treatmentPromise')}</strong>
             </p>
           </div>
           
           <form onSubmit={handleSubmit} className="contact-form quick-contact-form">
-            <h4 className="form-subtitle">Preencha em 30 segundos e receba contato IMEDIATO:</h4>
+            <h4 className="form-subtitle">{t('contactForm.formSubtitle')}</h4>
             
             <div className="form-group">
               <input
@@ -198,7 +198,7 @@ const ContactForm = () => {
                 name="nome"
                 value={formData.nome}
                 onChange={handleInputChange}
-                placeholder="Seu nome completo"
+                placeholder={t('contactForm.fields.namePlaceholder')}
                 className={errors.nome ? 'error' : ''}
               />
               {errors.nome && <span className="error-text">{errors.nome}</span>}
@@ -210,7 +210,7 @@ const ContactForm = () => {
                 name="whatsapp"
                 value={formData.whatsapp}
                 onChange={handleInputChange}
-                placeholder="WhatsApp (21) 99999-9999"
+                placeholder={t('contactForm.fields.whatsappPlaceholder')}
                 maxLength="15"
                 className={errors.whatsapp ? 'error' : ''}
               />
@@ -224,13 +224,10 @@ const ContactForm = () => {
                 onChange={handleInputChange}
                 className={errors.queixa_principal ? 'error' : ''}
               >
-                <option value="">Sua principal queixa:</option>
-                <option value="Dor lombar/lombalgia">🔥 Dor lombar/lombalgia</option>
-                <option value="Hérnia de disco">💥 Hérnia de disco</option>
-                <option value="Nervo ciático/ciatalgia">⚡ Nervo ciático/ciatalgia</option>
-                <option value="Dor cervical/pescoço">😣 Dor cervical/pescoço</option>
-                <option value="Travamento da coluna">🔒 Travamento da coluna</option>
-                <option value="Dor que irradia para pernas">📍 Dor que irradia para pernas</option>
+                <option value="">{t('contactForm.fields.complaintPlaceholder')}</option>
+                {complaintsData.map((complaint, index) => (
+                  <option key={index} value={complaint.value}>{complaint.label}</option>
+                ))}
               </select>
               {errors.queixa_principal && <span className="error-text">{errors.queixa_principal}</span>}
             </div>
@@ -241,7 +238,7 @@ const ContactForm = () => {
                 className="btn-primary cta-main"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? '⏳ Enviando...' : '🚀 Quero Agendar AGORA'}
+                {isSubmitting ? t('contactForm.buttons.submitting') : t('contactForm.buttons.submit')}
               </button>
 
               <button
@@ -249,28 +246,27 @@ const ContactForm = () => {
                 className="btn-whatsapp"
                 onClick={sendViaWhatsApp}
               >
-                📱 Fale com Especialista AGORA
+                {t('contactForm.buttons.whatsapp')}
               </button>
             </div>
 
             <div className="quick-benefits">
-              <div className="benefit-item">⭐ 4.9/5 avaliação</div>
-              <div className="benefit-item">✅ 500+ pacientes</div>
-              <div className="benefit-item">🏆 10+ anos experiência</div>
+              {benefitsData.map((benefit, index) => (
+                <div key={index} className="benefit-item">{benefit}</div>
+              ))}
             </div>
 
             {showSuccess && (
               <div className="success-message">
-                ✅ <strong>Formulário enviado com sucesso!</strong><br />
-                Nossa equipe entrará em contato em até 5 minutos para agendar sua avaliação URGENTE.
+                {t('contactForm.successMessage')}
               </div>
             )}
           </form>
         </div>
 
         <div className="trust-indicators">
-          <p>🔒 Seus dados estão seguros</p>
-            <p> 📞 Atendimento rápido</p>
+          <p>{t('contactForm.trustIndicators.secure')}</p>
+          <p>{t('contactForm.trustIndicators.fastService')}</p>
         </div>
       </div>
     </section>

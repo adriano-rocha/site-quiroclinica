@@ -93,7 +93,6 @@
   font-weight: 600;
 }
 
-/* Estilo para o botão WhatsApp */
 .results-cta-btn.whatsapp-btn {
   display: inline-flex;
   align-items: center;
@@ -125,7 +124,6 @@
   animation: pulse 2s infinite;
 }
 
-/* Animação pulsante no ícone */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -138,7 +136,6 @@
   }
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .results {
     padding: 60px 0;

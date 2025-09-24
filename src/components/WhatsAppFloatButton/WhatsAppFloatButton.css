@@ -1,4 +1,3 @@
-/* Container principal */
 .whatsapp-float-container {
   position: fixed;
   bottom: 20px;
@@ -6,10 +5,9 @@
   z-index: 2000;
   display: flex;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Botão WhatsApp */
 .whatsapp-float {
   position: relative;
   background: transparent;
@@ -20,16 +18,17 @@
 }
 
 @keyframes float {
-  0%, 100% { 
-    transform: translateY(0px); 
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  50% { 
-    transform: translateY(-8px); 
+  50% {
+    transform: translateY(-8px);
   }
 }
 
 .whatsapp-float::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -58,7 +57,7 @@
 }
 
 .whatsapp-float::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -15px;
   left: -15px;
@@ -103,7 +102,6 @@
   transform: scale(0.95);
 }
 
-/* Badge de urgência */
 .urgency-badge {
   position: absolute;
   top: -5px;
@@ -121,13 +119,17 @@
 }
 
 @keyframes badge-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
-/* Texto hover Desktop */
 .whatsapp-text {
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, #25d366, #128c7e);
   color: white;
   padding: 8px 12px;
   border-radius: 8px;
@@ -147,7 +149,7 @@
 }
 
 .whatsapp-text::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -8px;
   top: 50%;
@@ -155,7 +157,7 @@
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  border-left-color: #25D366;
+  border-left-color: #25d366;
 }
 
 .whatsapp-message {
@@ -173,7 +175,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Texto Mobile */
 .whatsapp-mobile-text {
   display: none;
   background: rgba(37, 211, 102, 0.95);
@@ -202,13 +203,12 @@
   letter-spacing: 0.3px;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .whatsapp-float-container {
     bottom: 15px;
     right: 15px;
   }
-  
+
   .whatsapp-icon {
     width: 45px;
     height: 45px;
@@ -222,12 +222,10 @@
     right: -4px;
   }
 
-  /* Esconder texto hover no mobile */
   .whatsapp-text {
     display: none;
   }
 
-  /* Mostrar texto fixo no mobile */
   .whatsapp-mobile-text {
     display: block;
   }

@@ -1,42 +1,75 @@
-import React from 'react';
-import './Videos.css';
+import React, { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import "./Videos.css";
 
 const Videos = () => {
-  
-  const videosData = [
-    {
-      id: 1,
-      src: '/videos/dep01.mp4',
-      title: 'Alívio Total das Dores no Ombro',
-      description: 'Ivanira chegou até nós com dores intensas no ombro e pescoço. Após o tratamento, ela não apenas superou o desconforto, mas alcançou um resultado tão impressionante que hoje faz questão de indicar a experiência a todos que conhece.'
-    },
-    {
-      id: 2,
-      src: '/videos/dep02.mp4',
-      title: 'De Cirurgia à Cura: A Transformação do André com a Quiropraxia',
-      description: 'Após ser diagnosticado com duas hérnias de disco e indicado para cirurgia, André encontrou no tratamento com o Vinnicius a solução que mudou sua vida. Recuperou seus movimentos e hoje caminha sem dor. Gratidão e qualidade de vida renovada!'
-    },
-    {
-      id: 4,
-      src: '/videos/dep03.mp4',
-      title: 'Técnicas Únicas, Resultados Espetaculares',
-      description: 'Conheça a história de Thali, que descobriu no tratamento integrado a solução para suas dores. Combinando a quiropraxia com os benefícios da medicina chinesa e da acupuntura, ela alcançou um resultado incrível: zero dor e uma nova qualidade de vida.'
-    },
-    {
-      id: 3,
-      src: '/videos/dep04.mp4',
-      title: 'Coluna Tratada, Postura Renovada',
-      description: 'Marcos vivia com dores e problemas de postura, mas encontrou no Vinnicius a solução que buscava. Com um tratamento especializado, ele não só alinhou a coluna e corrigiu a postura, como também recuperou sua qualidade de vida. Hoje, ele é a prova viva de que a quiropraxia, quando feita por um profissional de excelência, faz toda a diferença.'
-    },
-  ];
+  const { t } = useTranslation();
+  const videosData = t("videos.testimonials", { returnObjects: true });
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? videosData.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === videosData.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX.current = e.changedTouches[0].clientX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const diff = touchStartX.current - touchEndX.current;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
 
   return (
     <section className="videos-section">
       <div className="videos-container">
-        <h3 className="videos-title">Pacientes Transformados</h3>
-        <div className="videos-grid">
-          {videosData.map((video) => (
-            <div key={video.id} className="video-item">
+        <h3 className="videos-title">{t("videos.title")}</h3>
+
+        <div
+          className="videos-grid"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          {videosData.map((video, index) => (
+            <div
+              key={video.id}
+              className={`video-item ${
+                isMobile ? (index === currentIndex ? "active" : "") : ""
+              }`}
+            >
               <div className="video-wrapper">
                 <video
                   className="video-player"
@@ -45,13 +78,16 @@ const Videos = () => {
                   playsInline
                   muted={false}
                   poster={`/videos/thumb-${video.id}.jpg`}
-                  onError={(e) => console.error('❌ Erro ao carregar vídeo:', video.src, e.target.error)}
-                  onLoadedData={() => console.log('✅ Vídeo carregado:', video.src)}
-                  onLoadStart={() => console.log('🔄 Iniciando carregamento:', video.src)}
-                  onCanPlay={() => console.log('▶️ Vídeo pronto para tocar:', video.src)}
+                  onError={(e) =>
+                    console.error(
+                      "❌ Erro ao carregar vídeo:",
+                      video.src,
+                      e.target.error
+                    )
+                  }
                 >
                   <source src={video.src} type="video/mp4" />
-                  Seu navegador não suporta vídeos HTML5.
+                  {t("videos.browserError")}
                 </video>
               </div>
               <div className="video-info">
@@ -61,6 +97,17 @@ const Videos = () => {
             </div>
           ))}
         </div>
+
+        {isMobile && (
+          <div className="carousel-controls">
+            <button className="carousel-btn prev" onClick={handlePrev}>
+              ❮
+            </button>
+            <button className="carousel-btn next" onClick={handleNext}>
+              ❯
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,23 +1,26 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import "./Locations.css";
 
 const Locations = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="localizacao" className="locations">
       <div className="locations-container">
         <div className="locations-info">
-          <h2>Localização</h2>
+          <h2>{t('locations.title')}</h2>
           <p>
-            <i className="fas fa-map-marker-alt"></i> Rua Senador Dantas, 117 – Sala 1418, <br />
-            Centro – Rio de Janeiro
+            <i className="fas fa-map-marker-alt"></i> {t('locations.address.street')}<br />
+            {t('locations.address.district')}
           </p>
 
-          <h2>Horários</h2>
-          <p>Segunda à Sexta:</p>
-          <p><i className="fas fa-clock"></i> 08h00 às 20:00</p>
-          <p>Sàbado:</p>
-          <p><i className="fas fa-clock"></i> 09:00 às 18:00</p>
-          <h4><i className="fas fa-calendar-check"></i> Agendamento por hora marcada</h4>
+          <h2>{t('locations.hours.title')}</h2>
+          <p>{t('locations.hours.weekdays')}:</p>
+          <p><i className="fas fa-clock"></i> {t('locations.hours.weekdaysTime')}</p>
+          <p>{t('locations.hours.saturday')}:</p>
+          <p><i className="fas fa-clock"></i> {t('locations.hours.saturdayTime')}</p>
+          <h4><i className="fas fa-calendar-check"></i> {t('locations.appointment')}</h4>
         </div>
 
         <div className="locations-map">
@@ -29,7 +32,7 @@ const Locations = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Localização da clínica"
+            title={t('locations.mapTitle')}
           ></iframe>
         </div>
       </div>

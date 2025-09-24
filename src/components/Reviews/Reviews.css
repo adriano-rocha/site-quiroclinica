@@ -181,7 +181,7 @@
 @media (max-width: 480px) {
   .reviews-section {
     margin-top: 100px; 
-    padding: 20px 20px 40px 20px; /* Reduzi padding-bottom */
+    padding: 20px 20px 40px 20px;
     position: relative; 
     z-index: 1; 
   }
@@ -195,7 +195,7 @@
     max-width: 100%;
     margin: 0 auto;
     overflow: visible;
-    padding-bottom: 20px; /* Reduzi padding-bottom */
+    padding-bottom: 20px; 
     position: relative;
   }
 
@@ -236,7 +236,6 @@
   }
 
   
-  /* SETAS NAS EXTREMIDADES DOS CARDS - Mobile */
   .carousel-controls {
     position: absolute; 
     top: 50%;
@@ -254,7 +253,7 @@
 
   
   .carousel-btn {
-    background: rgba(255, 255, 255, 0.3); /* Meio transparente */
+    background: rgba(255, 255, 255, 0.3); 
     color: rgba(0, 0, 0, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 8px 10px;
@@ -267,16 +266,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: auto; /* Reativar para os botões */
+    pointer-events: auto; 
     backdrop-filter: blur(5px);
   }
 
   .carousel-btn.prev {
-    transform: translateX(-50%); /* Empurra seta esquerda para fora */
+    transform: translateX(-50%); 
   }
 
   .carousel-btn.next {
-    transform: translateX(50%); /* Empurra seta direita para fora */
+    transform: translateX(50%);
   }
 
   .carousel-btn:hover,
@@ -295,8 +294,8 @@
     }
     
     .carousel-controls {
-      bottom: auto; /* Remove o posicionamento inferior */
-      gap: auto; /* Remove gap */
+      bottom: auto; 
+      gap: auto; 
     }
     
     .carousel-btn {

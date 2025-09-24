@@ -73,7 +73,6 @@
   animation: fadeInUp 1s ease-out;
 }
 
-/* Badge de Urgência */
 .hero-urgency-badge {
   background: linear-gradient(45deg, #e65100, #ff9800); 
   color: #fff;
@@ -121,7 +120,6 @@
   letter-spacing: 0.01em;
 }
 
-/* Seção de Sintomas */
 .hero-symptoms {
   background: rgba(0, 0, 0, 0.218);
   border-radius: 8px;
@@ -162,7 +160,6 @@
   font-weight: 500;
 }
 
-/* Botões CTA */
 .hero-cta-buttons {
   display: flex;
   gap: 15px;
@@ -209,7 +206,6 @@
   transform: translateY(-2px);
 }
 
-/* Prova Social */
 .hero-social-proof {
   margin-top: 15px;
   font-size: 0.75rem;
@@ -218,7 +214,7 @@
   opacity: 0.9;
 }
 
-/* Modal Formulário Rápido */
+
 .quick-form-overlay {
   position: fixed;
   top: 0;
@@ -389,7 +385,6 @@
   }
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 1.6rem;
@@ -497,11 +492,11 @@
   }
   
   .hero-social-proof {
-    font-size: 1rem;       /* maior para leitura confortável */
-    line-height: 1.6;      /* mais espaçado */
-    font-weight: 400;      /* mais forte */
-    color: #ffffff;        /* branco sobre fundo escuro */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* contraste e legibilidade */
+    font-size: 1rem;       
+    line-height: 1.6;      
+    font-weight: 400;      
+    color: #ffffff;       
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   }
 
 

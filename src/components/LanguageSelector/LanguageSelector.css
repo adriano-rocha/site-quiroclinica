@@ -36,7 +36,7 @@
   display: block;
 }
 
-/* Responsivo para mobile */
+
 @media (max-width: 768px) {
   .language-selector {
     gap: 6px;

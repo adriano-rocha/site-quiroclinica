@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './Header.css';
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
-  const [activeLang, setActiveLang] = useState('PT');
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,22 +21,20 @@ const Header = () => {
     document.body.style.overflow = !mobileMenuActive ? 'hidden' : 'unset';
   };
 
-  const changeLanguage = (lang) => {
-    setActiveLang(lang);
+  // CORRIGIDO: Agora usa i18n.changeLanguage()
+  const changeLanguage = (languageCode) => {
+    i18n.changeLanguage(languageCode);
   };
 
   const scrollToSection = (sectionId) => {
     if (sectionId === 'home') {
-      
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
-    
     
     if (mobileMenuActive) {
       setMobileMenuActive(false);
@@ -43,17 +42,27 @@ const Header = () => {
     }
   };
 
+  // NOVO: Menu items agora usa traduções
   const menuItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'sobre', label: 'Sobre' },
-    { id: 'resultados', label: 'Resultados' },
-    { id: 'localizacao', label: 'Localização' },
-    { id: 'agendamento', label: 'Contato' } 
+    { id: 'home', label: t('header.nav.home') },
+    { id: 'sobre', label: t('header.nav.about') },
+    { id: 'resultados', label: t('header.nav.results') },
+    { id: 'localizacao', label: t('header.nav.location') },
+    { id: 'agendamento', label: t('header.nav.contact') }
+  ];
+
+  // Idiomas disponíveis
+  const languages = [
+    { code: 'pt', flag: '/flags/br.png', title: 'Português' },
+    { code: 'en', flag: '/flags/eua.png', title: 'English' },
+    { code: 'es', flag: '/flags/esp.png', title: 'Español' }
   ];
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
+
+
         <div className="logo">
           <img
             src="/images/logo-quiroclinica.png"
@@ -79,29 +88,31 @@ const Header = () => {
 
         <div className="header-actions">
           <div className="language-selector">
-            <button className={`language-btn ${activeLang === 'PT' ? 'active' : ''}`} onClick={() => changeLanguage('PT')} title="Português">
-              <img className="flag-image" src="/flags/br.png" alt="Português" />
-            </button>
-            <button className={`language-btn ${activeLang === 'EN' ? 'active' : ''}`} onClick={() => changeLanguage('EN')} title="English">
-              <img className="flag-image" src="/flags/eua.png" alt="English" />
-            </button>
-            <button className={`language-btn ${activeLang === 'ES' ? 'active' : ''}`} onClick={() => changeLanguage('ES')} title="Español">
-              <img className="flag-image" src="/flags/esp.png" alt="Español" />
-            </button>
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                className={`language-btn ${i18n.language === language.code ? 'active' : ''}`}
+                onClick={() => changeLanguage(language.code)}
+                title={language.title}
+              >
+                <img className="flag-image" src={language.flag} alt={language.title} />
+              </button>
+            ))}
           </div>
         </div>
 
         <div className="mobile-actions">
           <div className="mobile-flags">
-            <button className={`language-btn ${activeLang === 'PT' ? 'active' : ''}`} onClick={() => changeLanguage('PT')} title="Português">
-              <img className="flag-image-mobile-small" src="/flags/br.png" alt="Português" />
-            </button>
-            <button className={`language-btn ${activeLang === 'EN' ? 'active' : ''}`} onClick={() => changeLanguage('EN')} title="English">
-              <img className="flag-image-mobile-small" src="/flags/eua.png" alt="English" />
-            </button>
-            <button className={`language-btn ${activeLang === 'ES' ? 'active' : ''}`} onClick={() => changeLanguage('ES')} title="Español">
-              <img className="flag-image-mobile-small" src="/flags/esp.png" alt="Español" />
-            </button>
+            {languages.map((language) => (
+              <button
+                key={`mobile-${language.code}`}
+                className={`language-btn ${i18n.language === language.code ? 'active' : ''}`}
+                onClick={() => changeLanguage(language.code)}
+                title={language.title}
+              >
+                <img className="flag-image-mobile-small" src={language.flag} alt={language.title} />
+              </button>
+            ))}
           </div>
 
           <button className={`menu-toggle ${mobileMenuActive ? 'active' : ''}`} onClick={toggleMobileMenu} aria-label="Menu">

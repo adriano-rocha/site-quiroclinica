@@ -229,7 +229,6 @@
   font-style: italic;
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
   .strategic-cta-2 {
     padding: 40px 0;

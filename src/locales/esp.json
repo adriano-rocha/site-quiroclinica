@@ -1,41 +1,440 @@
 {
   "header": {
-    "logoAlt": "Quiroclínica - Quiropráctica, Acupuntura y Terapias Avanzadas",
     "nav": {
       "home": "Inicio",
-      "about": "Sobre mí",
+      "about": "Acerca de",
       "results": "Resultados",
-      "location": "Ubicación",
+      "location": "Ubicación", 
       "contact": "Contacto"
-    },
-    "scheduleButton": "Agendar Cita",
-    "language": "Idioma",
-    "toggleMenu": "Abrir menú",
-    "whatsappMessage": "¡Hola! Me gustaría agendar una cita en la Quiroclínica."
+    }
   },
   "hero": {
+    "urgencyBadge": "🚨 CUPOS LIMITADOS HOY - Solo 3 horarios disponibles",
+    "symptomsIntro": "¿Sientes algunos de estos síntomas?",
     "slides": [
       {
-        "title": "Quiroclínica",
-        "subtitle": "Atención personalizada con resultados rápidos y efectivos para el dolor crónico, rehabilitación muscular y bienestar.",
-        "buttonText": "AGENDAR CITA"
+        "title": "¿Sufres de Dolor Lumbar, Ciática o Columna Bloqueada?",
+        "subtitle": "Tratamiento de Quiropráctica en Río de Janeiro que resuelve la CAUSA del dolor, no solo alivia temporalmente.",
+        "buttonText": "Agenda tu Evaluación YA",
+        "symptoms": [
+          "Dolor lumbar constante",
+          "Bloqueo de columna", 
+          "Dificultad para levantarse o caminar",
+          "Dolor que se irradia a las piernas"
+        ]
       },
       {
-        "title": "Transforma tu Salud",
-        "subtitle": "Tratamientos especializados en quiropráctica y acupuntura. Cuida tu cuerpo con expertos.",
-        "buttonText": "QUIERO ATENCIÓN"
+        "title": "¿El Dolor de Espalda Limita tu Vida?",
+        "subtitle": "Más de 10 años tratando hernias de disco, nervio ciático y dolores crónicos con resultados comprobados.",
+        "buttonText": "Habla con Especialista Ahora",
+        "symptoms": [
+          "Hernia de disco",
+          "Nervio ciático inflamado",
+          "Dolores que empeoran sentado",
+          "Hormigueo en las piernas"
+        ]
       },
       {
-        "title": "¿Dolor de Espalda?",
-        "subtitle": "Nuestros tratamientos se enfocan en resultados duraderos. Agenda tu cita y siente la diferencia.",
-        "buttonText": "AGENDAR CITA"
+        "title": "¿Cansado de Tomar Medicamentos para el Dolor?",
+        "subtitle": "Descubre cómo la Quiropráctica elimina el dolor sin medicamentos, tratando la raíz del problema.",
+        "buttonText": "Quiero Tratamiento Definitivo",
+        "symptoms": [
+          "Dependencia de antiinflamatorios",
+          "Dolor que siempre vuelve",
+          "Efectos secundarios de medicinas",
+          "Sin mejoría duradera"
+        ]
       },
       {
-        "title": "Conoce Nuestra Clínica",
-        "subtitle": "Estructura completa y profesionales calificados para cuidar tu salud con excelencia.",
-        "buttonText": "SABER MÁS"
+        "title": "¿El Dolor te Impide Trabajar?",
+        "subtitle": "Cientos de pacientes recuperaron su calidad de vida. ¡Tú puedes ser el próximo!",
+        "buttonText": "Asegura tu Cita Hoy",
+        "symptoms": [
+          "Faltas al trabajo por dolor",
+          "Dificultad para concentrarse", 
+          "Noches mal dormidas",
+          "Limitaciones en actividades"
+        ]
       }
     ],
-    "whatsappMessage": "¡Hola! Me gustaría agendar una cita en la Quiroclínica."
+    "quickForm": {
+      "buttonText": "Formulario Rápido",
+      "title": "⚡ Cita Rápida",
+      "subtitle": "Completa en 30 segundos y recibe contacto inmediato:",
+      "fields": {
+        "name": "Tu nombre completo",
+        "whatsapp": "WhatsApp (21) 99999-9999",
+        "complaint": "Tu principal queja:",
+        "complaints": {
+          "placeholder": "Tu principal queja:",
+          "lombar": "Dolor lumbar/lumbalgia",
+          "hernia": "Hernia de disco",
+          "sciatica": "Nervio ciático/ciatalgia",
+          "cervical": "Dolor cervical/cuello",
+          "locked": "Bloqueo de columna",
+          "others": "Otros"
+        }
+      },
+      "submitBtn": "🚀 Recibir Contacto AHORA"
+    },
+    "socialProof": {
+      "rating": "⭐ 4.9/5 evaluación",
+      "patients": "✅ 500+ pacientes",
+      "experience": "🏆 10+ años"
+    },
+    "navigation": {
+      "prevSlide": "Slide anterior",
+      "nextSlide": "Próximo slide",
+      "goToSlide": "Ir al slide"
+    }
+  },
+  "about": {
+    "title": "El Especialista que Acabará con tu Dolor",
+    "painIntro": "Hace 10 años resolviendo dolores que otros profesionales no pueden.",
+    "painIntroSub": "Si estás sufriendo con dolor lumbar, hernia de disco o nervio ciático, llegaste al lugar correcto.",
+    "stats": {
+      "patients": {
+        "number": "500+",
+        "label": "Pacientes sin dolor"
+      },
+      "success": {
+        "number": "95%",
+        "label": "Tasa de éxito"
+      },
+      "experience": {
+        "number": "10+",
+        "label": "Años de experiencia"
+      }
+    },
+    "doctorName": "Dr. Vinnicius de Paula",
+    "description": "Especialista en acabar con dolores crónicos usando técnicas avanzadas de Quiropráctica, Acupuntura y Masoterapia. Mis pacientes llegan sufriendo y salen sin dolor.",
+    "problemsSolved": {
+      "title": "Resuelvo problemas como:",
+      "problems": [
+        "🔥 Dolor lumbar crónico",
+        "💥 Hernia de disco",
+        "⚡ Nervio ciático inflamado",
+        "😣 Dolor cervical y cuello",
+        "🔒 Bloqueo de columna",
+        "💪 Tensiones musculares"
+      ]
+    },
+    "credentials": {
+      "title": "Formación especializada:",
+      "items": [
+        "IBRAQUI-SP (Quiropráctica)",
+        "ACABO-RJ (Acupuntura)",
+        "IBTED-RJ (Masoterapia)"
+      ]
+    },
+    "whyChoose": {
+      "title": "Por qué mis pacientes eligen continuar conmigo:",
+      "benefits": [
+        "✓ Técnicas que atacan la CAUSA del dolor, no solo síntomas",
+        "✓ Resultados visibles ya en la primera sesión",
+        "✓ Atención en el Centro de Río - fácil acceso",
+        "✓ Más de una década salvando vidas del dolor crónico"
+      ]
+    },
+    "cta": {
+      "urgencyTitle": "Tu dolor no pasará solo.",
+      "urgencySubtitle": "Cada día que esperas es un día más de sufrimiento innecesario.",
+      "button": "🚀 Háblame Ahora y Acaba con tu Dolor",
+      "guarantee": "🔒 Conversación confidencial | 📞 Respondemos rápido"
+    },
+    "badges": {
+      "years": "10+ Años",
+      "patients": "500+ Pacientes"
+    },
+    "alt": "Dr. Vinnicius de Paula - Especialista en Quiropráctica"
+  },
+  "results": {
+    "title": "Resultados Comprobados",
+    "intro": {
+      "part1": "En ",
+      "highlight1": "Quiroclínica",
+      "part2": ", cada paciente experimenta una",
+      "highlight2": " transformación completa",
+      "part3": " a través de nuestros tratamientos ",
+      "highlight3": "personalizados y eficaces",
+      "part4": "."
+    },
+    "cards": [
+      {
+        "id": 1,
+        "icon": "🎯",
+        "title": "Alivio Inmediato del Dolor",
+        "description": "Resultados visibles ya en la primera sesión con técnicas avanzadas de <strong>quiropráctica</strong> y tratamiento personalizado."
+      },
+      {
+        "id": 2,
+        "icon": "⚡",
+        "title": "Corrección Postural Efectiva",
+        "description": "Mejora significativa de la postura a través de <span class=\"keyword\">ajustes precisos</span> y ejercicios terapéuticos específicos."
+      },
+      {
+        "id": 3,
+        "icon": "💪",
+        "title": "Fortalecimiento Muscular",
+        "description": "Desarrollo de la musculatura de soporte para <strong>prevención</strong> de futuras lesiones y dolores."
+      }
+    ],
+    "urgency": {
+      "limitedSpots": "Cupos limitados debido a la alta demanda.",
+      "callToAction": "⚠️ No postergues el cuidado de tu salud — ¡tu cuerpo merece estar libre de dolores!"
+    },
+    "whatsappButton": "Agendar por WhatsApp"
+  },
+  "videos": {
+    "title": "Pacientes Transformados",
+    "browserError": "Tu navegador no soporta videos HTML5.",
+    "testimonials": [
+      {
+        "id": 1,
+        "src": "/videos/dep01.mp4",
+        "title": "Alivio Total de los Dolores en el Hombro",
+        "description": "Ivanira llegó a nosotros con dolores intensos en el hombro y cuello. Después del tratamiento, ella no solo superó el malestar, sino que alcanzó un resultado tan impresionante que hoy se empeña en recomendar la experiencia a todos los que conoce."
+      },
+      {
+        "id": 2,
+        "src": "/videos/dep02.mp4",
+        "title": "De la Cirugía a la Cura: La Transformación de André con la Quiropráctica",
+        "description": "Después de ser diagnosticado con dos hernias de disco e indicado para cirugía, André encontró en el tratamiento con Vinnicius la solución que cambió su vida. Recuperó sus movimientos y hoy camina sin dolor. ¡Gratitud y calidad de vida renovada!"
+      },
+      {
+        "id": 4,
+        "src": "/videos/dep03.mp4",
+        "title": "Técnicas Únicas, Resultados Espectaculares",
+        "description": "Conoce la historia de Thali, que descubrió en el tratamiento integrado la solución para sus dolores. Combinando la quiropráctica con los beneficios de la medicina china y la acupuntura, ella alcanzó un resultado increíble: cero dolor y una nueva calidad de vida."
+      },
+      {
+        "id": 3,
+        "src": "/videos/dep04.mp4",
+        "title": "Columna Tratada, Postura Renovada",
+        "description": "Marcos vivía con dolores y problemas de postura, pero encontró en Vinnicius la solución que buscaba. Con un tratamiento especializado, él no solo alineó la columna y corrigió la postura, sino que también recuperó su calidad de vida. Hoy, él es la prueba viviente de que la quiropráctica, cuando es realizada por un profesional de excelencia, hace toda la diferencia."
+      }
+    ]
+  },
+  "strategicCTA1": {
+    "badge": "🔥 TRANSFORMACIÓN REAL",
+    "title": "¿Quieres Tener Resultados Como Esos Pacientes?",
+    "description": {
+      "part1": "Acabas de ver personas que ",
+      "highlight1": "sufrían con dolores",
+      "part2": " exactamente como tú. Hoy ellas viven ",
+      "highlight2": "sin dolor",
+      "part3": " y con ",
+      "highlight3": "calidad de vida",
+      "part4": " renovada."
+    },
+    "benefits": [
+      "✅ Alivio ya en la primera sesión",
+      "✅ Resultados comprobados",
+      "✅ Técnicas que funcionan"
+    ],
+    "urgency": {
+      "title": "Tu dolor no desaparecerá solo.",
+      "subtitle": "Cada día que pasa es más sufrimiento innecesario."
+    },
+    "button": "🚀 ¡Quiero Ese Resultado También!",
+    "guarantee": "📞 Atención inmediata | 🔒 Conversación confidencial",
+    "whatsappMessage": "🎥 *VI LOS TESTIMONIOS Y QUIERO ESE RESULTADO!*\n\n😰 *Mi situación actual:*\n• Sufro con dolores constantes\n• Quiero tener el mismo alivio de esos pacientes\n• Necesito un tratamiento que realmente funcione\n\n🎯 *Quiero agendar mi evaluación HOY!*\n📞 ¿Cuándo puedo conversar con el especialista?"
+  },
+  "reviews": {
+    "photoAlt": "Foto de",
+    "navigation": {
+      "prevReview": "Evaluación anterior",
+      "nextReview": "Próxima evaluación",
+      "goToReview": "Ir a evaluación"
+    },
+    "testimonials": [
+      { 
+        "id": 1, 
+        "author": "Dirceu Schneider Junior", 
+        "date": "02/08/2024", 
+        "text": "No tengo palabras para describir el trabajo y el profesional ejemplar que es el Dr. Vinnicius. Solo tengo que agradecer por el desarrollo que tuve con él, pues vivir sin dolor es excepcional...", 
+        "photo": "/reviews/rev01.png" 
+      },
+      { 
+        "id": 2, 
+        "author": "Simone Conceição", 
+        "date": "11/06/2024", 
+        "text": "Un profesional top. Llegué a su consultorio con dolor, y salí sin él, masaje maravilloso, ¡nota 1000!", 
+        "photo": "/reviews/rev02.png" 
+      },
+      { 
+        "id": 3, 
+        "author": "Fabio Emiliano", 
+        "date": "05/09/2024", 
+        "text": "Fue una experiencia increíble, solo una sesión y salí sin dolor alguno... Un alivio enorme, estoy muy satisfecho, pueden confiar, ¡lo super recomiendo!", 
+        "photo": "/reviews/rev03.png" 
+      },
+      { 
+        "id": 4, 
+        "author": "Sonia Cristina", 
+        "date": "15/02/2024", 
+        "text": "Super Profesional, me encantó todo el procedimiento. Ya en la primera sesión sentí mejoras absurdas, ¡super recomiendo! Este sabe lo que hace, gratitud.", 
+        "photo": "/reviews/rev04.png" 
+      },
+      { 
+        "id": 5, 
+        "author": "Edgar Garcia", 
+        "date": "20/03/2024", 
+        "text": "El trabajo realizado es excepcional. Agendamiento tranquilo, clínica bien ubicada y un profesional MUY atento. Además de la quiropráctica convencional, dedicó tiempo a entender mi rutina, para identificar posibles causantes de la mala postura. ¡Recomiendo!", 
+        "photo": "/reviews/rev05.png" 
+      },
+      { 
+        "id": 6, 
+        "author": "Alessandra Vera", 
+        "date": "17/07/2024", 
+        "text": "Excelente profesional, fui por intermedio de mi esposo que ya es paciente de él hace más de 2 años. ¡Recomiendo!", 
+        "photo": "/reviews/rev06.png" 
+      }
+    ]
+  },
+  "strategicCTA2": {
+    "badge": "⭐ CIENTOS DE ÉXITOS",
+    "title": "Únete a Cientos de Pacientes Satisfechos",
+    "description": {
+      "part1": "Estas evaluaciones son apenas una ",
+      "highlight1": "pequeña muestra",
+      "part2": " de los resultados que alcanzamos. ",
+      "highlight2": "Más de 500 pacientes",
+      "part3": " ya recuperaron su calidad de vida con nosotros."
+    },
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Pacientes Tratados"
+      },
+      {
+        "number": "10+",
+        "label": "Años de Experiencia"
+      },
+      {
+        "number": "95%",
+        "label": "Satisfacción"
+      }
+    ],
+    "socialProof": [
+      {
+        "quote": "Ya en la primera sesión sentí mejoras absurdas",
+        "author": "Sonia Cristina"
+      },
+      {
+        "quote": "Salí sin dolor alguno... ¡Un alivio enorme!",
+        "author": "Fabio Emiliano"
+      }
+    ],
+    "urgency": {
+      "title": "No seas uno más sufriendo en silencio.",
+      "subtitle": "¡Sé el próximo caso de éxito!"
+    },
+    "button": "🎯 ¡Quiero Formar Parte de Este Grupo!",
+    "guarantee": "🏆 Técnicas comprobadas | ⚡ Resultados rápidos | 💯 Profesional especializado",
+    "whatsappMessage": "⭐ *VI LAS EVALUACIONES Y QUIERO FORMAR PARTE!*\n\n🔍 *Después de leer los testimonios:*\n• Veo que otros pacientes tuvieron éxito\n• Quiero el mismo alivio y calidad de vida\n• Confío en la experiencia comprobada del Dr. Vinnicius\n\n👥 *QUIERO UNIRME A LOS PACIENTES SATISFECHOS*\n📅 ¿Cuándo puedo agendar mi primera consulta?\n💬 Necesito más información sobre el tratamiento"
+  },
+  "contactForm": {
+    "urgencyBadge": "🚨 SOLO 3 CUPOS HOY - Atención Inmediata Garantizada",
+    "title": "¿Sufres de Dolor Lumbar, Ciática o Columna Bloqueada?",
+    "symptomsQuestion": "¿Sientes algunos de estos síntomas?",
+    "symptoms": [
+      "✓ Dolor lumbar constante",
+      "✓ Bloqueo de columna",
+      "✓ Dificultad para levantarse",
+      "✓ Dolor que se irradia a las piernas"
+    ],
+    "treatmentPromise": "¡Tratamiento de Quiropráctica que resuelve la CAUSA del dolor, no solo alivia!",
+    "formSubtitle": "Completa en 30 segundos y recibe contacto INMEDIATO:",
+    "fields": {
+      "namePlaceholder": "Tu nombre completo",
+      "whatsappPlaceholder": "WhatsApp (21) 99999-9999",
+      "complaintPlaceholder": "Tu principal queja:"
+    },
+    "complaints": [
+      {
+        "value": "Dolor lumbar/lumbalgia",
+        "label": "🔥 Dolor lumbar/lumbalgia"
+      },
+      {
+        "value": "Hernia de disco",
+        "label": "💥 Hernia de disco"
+      },
+      {
+        "value": "Nervio ciático/ciatalgia",
+        "label": "⚡ Nervio ciático/ciatalgia"
+      },
+      {
+        "value": "Dolor cervical/cuello",
+        "label": "😣 Dolor cervical/cuello"
+      },
+      {
+        "value": "Bloqueo de columna",
+        "label": "🔒 Bloqueo de columna"
+      },
+      {
+        "value": "Dolor que se irradia a las piernas",
+        "label": "📍 Dolor que se irradia a las piernas"
+      }
+    ],
+    "validation": {
+      "nameRequired": "El nombre es obligatorio",
+      "whatsappRequired": "WhatsApp es obligatorio",
+      "complaintRequired": "Selecciona tu queja principal"
+    },
+    "buttons": {
+      "submitting": "⏳ Enviando...",
+      "submit": "🚀 Quiero Agendar AHORA",
+      "whatsapp": "📱 Habla con Especialista AHORA"
+    },
+    "benefits": [
+      "⭐ 4.9/5 evaluación",
+      "✅ 500+ pacientes",
+      "🏆 10+ años experiencia"
+    ],
+    "successMessage": "✅ <strong>¡Formulario enviado con éxito!</strong><br />Nuestro equipo se contactará en hasta 5 minutos para agendar tu evaluación URGENTE.",
+    "errorMessage": "Error al enviar formulario. Intenta por WhatsApp o recarga la página.",
+    "trustIndicators": {
+      "secure": "🔒 Tus datos están seguros",
+      "fastService": "📞 Atención rápida"
+    },
+    "whatsappMessage": "🚨 *FORMULARIO RÁPIDO - QuiroClínica*\n\n👤 *Nombre:* {{nome}}\n📱 *WhatsApp:* {{whatsapp}}\n⚕️ *Queja Principal:* {{queixa}}\n\n🆘 *URGENTE: ¡Necesito atención hoy!*\n⏰ ¿Cuándo puedo conversar con el especialista?"
+  },
+  "locations": {
+    "title": "Ubicación",
+    "address": {
+      "street": "Rua Senador Dantas, 117 – Sala 1418,",
+      "district": "Centro – Rio de Janeiro"
+    },
+    "hours": {
+      "title": "Horarios",
+      "weekdays": "Lunes a Viernes",
+      "weekdaysTime": "08:00 a 20:00",
+      "saturday": "Sábado",
+      "saturdayTime": "09:00 a 18:00"
+    },
+    "appointment": "Citas con hora agendada",
+    "mapTitle": "Ubicación de la clínica"
+  },
+  "footer": {
+    "logoAlt": "Logo Quiroclínica",
+    "address": "Rua Senador Dantas, 117 – Sala 1418, Centro – Rio de Janeiro",
+    "phone": "Teléfono",
+    "email": "Email",
+    "notice": "Atención particular. No proporcionamos recibos para reembolso de planes de salud.",
+    "copyright": "Todos los derechos reservados.",
+    "whatsappMessage": "¡Hola! Me gustaría obtener más información sobre Quiroclínica.",
+    "emailSubject": "Contacto - Quiroclínica"
+  },
+   "whatsappFloat": {
+    "urgentMessage": "🚨 URGENTE - ¡Tengo dolor y necesito ayuda!\n\n😰 Situación actual:\n• Dolor que está limitando mi vida\n• Necesito una solución efectiva\n• Ya no puedo soportar más esta situación\n\n📞 ¿Cuándo puedo hablar con el especialista?\n⏰ ¡Necesito atención hoy mismo!\n\n💬 Vine desde el sitio web de QuiroClínica",
+    "hoverMessage": "¡El dolor no espera!",
+    "hoverCta": "Habla con especialista AHORA",
+    "buttonTitle": "Emergencia: Habla con especialista en dolor AHORA",
+    "ariaLabel": "Contacto urgente vía WhatsApp para tratamiento del dolor",
+    "iconAlt": "WhatsApp",
+    "mobileQuestion": "¿Dolor?",
+    "mobileAction": "¡Habla Ahora!"
   }
+
 }
