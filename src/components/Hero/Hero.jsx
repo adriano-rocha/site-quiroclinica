@@ -54,8 +54,7 @@ const Hero = () => {
   const prevSlide = () =>
     setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 
-  // Proteção caso os slides ainda não tenham carregado
-  if (!slideContent || !Array.isArray(slideContent)) {
+    if (!slideContent || !Array.isArray(slideContent)) {
     return <div>Carregando...</div>;
   }
 
